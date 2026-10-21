@@ -4,9 +4,25 @@
 
 [中文](README.md) · [Installation](INSTALL.md) · [Coverage](docs/PARITY.md) · [Validation](docs/TESTING.md)
 
-![Watercolor desk artwork](skins/whale-desk/assets/desk/home.png)
+![Whale Desk light home preview](evidence/whale-desk-light.png)
 
-*Background artwork used by the skin, not a native-app screenshot.*
+*Static documentation fixture rendered with the shipped CSS and fictional data, not a native DSH screenshot.*
+
+## Complete preview gallery
+
+![Dark home preview](evidence/whale-desk-dark.png)
+
+| Light conversations | Dark conversations |
+| --- | --- |
+| ![Light messages](evidence/whale-desk-messages-light.png) | ![Dark messages](evidence/whale-desk-messages-dark.png) |
+
+| Light settings | Dark settings |
+| --- | --- |
+| ![Light settings](evidence/whale-desk-settings-light.png) | ![Dark settings](evidence/whale-desk-settings-dark.png) |
+
+[Browse all components](docs/COMPONENTS.md): **40 categories, 80 component previews, 14 artworks, and 6 full interface previews — 100 images**. Category names match the upstream gallery. These static fixtures demonstrate CSS appearance; they do not establish runtime compatibility. [Generation and coverage notes](docs/PREVIEWS.md).
+
+[Download the latest full repository](https://github.com/Xtsaixuexi/whale-desk-skin/archive/refs/heads/main.zip) and open `docs/gallery.html` for an offline, filterable gallery. The original v1.1.1 release ZIP predates this documentation expansion and remains unchanged.
 
 A cream, warm-wood and watercolor theme for DeepSeek Harness. It preserves the familiar sidebar and conversation layout while adding mauve typography, soft ceramic surfaces, a narrower composer and watercolor flowers. LXGW WenKai is used for interface text; Long Cang for expressive headings; code keeps a monospace face.
 

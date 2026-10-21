@@ -6,9 +6,31 @@
 
 [English](README.en.md) · [安装与更新](INSTALL.md) · [组件与配图](docs/COMPONENTS.md) · [DIY 配置](docs/CUSTOMIZATION.md) · [与原项目对照](docs/PARITY.md) · [测试状态](docs/TESTING.md)
 
-![鲸伴的奶油暖木书桌：蓝发鲸鱼娘、鲸鱼玩偶、雏菊与暖灯](skins/whale-desk/assets/desk/home.png)
+![鲸伴 · 日光首页静态预览](evidence/whale-desk-light.png)
 
-*上图是皮肤实际使用的背景素材，不是完整界面截图。当前皮肤预览卡也使用这张素材。实机回归范围见测试状态；不以概念图代替运行证据。*
+*使用随包皮肤 CSS 和虚构数据渲染的静态界面预览，不是 DSH 实机截图。完整交互测试范围见 [测试状态](docs/TESTING.md)。*
+
+## 完整效果展示
+
+### 晚灯 · 深色首页
+
+![深色首页静态预览](evidence/whale-desk-dark.png)
+
+### 对话与代码
+
+| 日光 · 浅色 | 晚灯 · 深色 |
+| --- | --- |
+| ![浅色对话](evidence/whale-desk-messages-light.png) | ![深色对话](evidence/whale-desk-messages-dark.png) |
+
+### 设置与用量
+
+| 日光 · 浅色 | 晚灯 · 深色 |
+| --- | --- |
+| ![浅色设置](evidence/whale-desk-settings-light.png) | ![深色设置](evidence/whale-desk-settings-dark.png) |
+
+**不止一张图：** [完整组件图册](docs/COMPONENTS.md) 包含 **40 类组件、80 张浅深色预览和 14 张独立配图**。加上上述 6 张界面预览，共 100 张展示图片。下载仓库后也可以打开 [离线画廊](docs/gallery.html)，按主题与栏目筛选。
+
+组件覆盖新会话、工作区、会话状态、账户、输入框、模型菜单、消息、代码、文件、任务看板、自动化、问答、待办、子智能体、远程访问和设置等。展示栏目按原项目逐项对齐；[查看图片对照与生成说明](docs/PREVIEWS.md)。
 
 ## 让工作台像一个有人陪伴的角落
 
@@ -22,6 +44,8 @@
 ## 安装
 
 [下载 v1.1.1 预发布版](https://github.com/Xtsaixuexi/whale-desk-skin/releases/tag/v1.1.1)：仅安装请选择 `whale-desk-1.1.1.zip`；完整仓库包另含 DIY 工具和文档。
+
+**获取最新完整图册：** [下载当前仓库 ZIP](https://github.com/Xtsaixuexi/whale-desk-skin/archive/refs/heads/main.zip)。图册在 v1.1.1 首次发布后补充；该版本 Release 中的旧仓库 ZIP 保留原样，最新图片请下载这里。
 
 1. 下载并解压仓库，把 **`skins/whale-desk` 文件夹**复制到 DSH 数据目录下的 `skins` 中。
 2. 默认路径为 Windows 的 `%USERPROFILE%\.dsh\skins\whale-desk`；自定义数据目录以 `DSH_HOME` 为准。

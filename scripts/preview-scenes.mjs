@@ -1,0 +1,70 @@
+// Documentation fixtures only: fictional content, no host API and no executable actions.
+export const A = '/skins/whale-desk/assets/';
+const img=(file,cls='art')=>`<img class="${cls}" src="${A}${file}" alt="">`;
+const button=(s,cls='')=>`<button class="${cls}">${s}</button>`;
+const label=s=>`<span class="label">${s}</span>`;
+const row=(a,b='')=>`<div class="row"><span>${a}</span><span class="muted">${b}</span></div>`;
+const card=(title,body,cls='')=>`<section class="sample-card ${cls}"><h3>${title}</h3>${body}</section>`;
+const menu=(title,items,cls='')=>`<div class="sample-menu ${cls}" role="menu"><h3>${title}</h3>${items.map((s,i)=>`<div class="menu-item ${i===0?'selected':''}" role="menuitem">${s}</div>`).join('')}</div>`;
+const conversationTitle='<div class="Dc7zOa_header"><div class="Dc7zOa_titleRow"><div class="Dc7zOa_crumbs"><div class="Dc7zOa_crumbCurrent">给今天的小想法，找一个开始</div></div></div></div>';
+export function composer(){return `<div class="preview-composerStack"><div class="Dc7zOa_heroWorkspaceRow">${button('▱ 默认工作区','Hqq-bq_workspace')}${button('<span class="_oGoKq_seatLabel">标准模式⌄</span>')}</div><div data-composer-card><div class="RlGAzG_row"><div class="RlGAzG_input" contenteditable="true">描述你想构建的内容，/ 调用指令，@ 文件或对话</div></div><div class="composer-bottom">${button('＋','RlGAzG_add')}${button('工作区内修改⌄','dlU_AG_trigger')}<span class="spacer"></span>${button('<span class="wq12jW_triggerLabel">DeepSeek-V4.1-Flash</span> <span class="wq12jW_triggerEffort">High⌄</span>','wq12jW_trigger')}${button('↑','RlGAzG_primary')}</div></div></div>`;}
+function workspaceDirectory(){return `<div class="_9lTDKa_groupSection"><div class="hIlkoa_projectRow"><span class="hIlkoa_folderActive">▱</span><span class="hIlkoa_projectText"><span class="hIlkoa_title">默认工作区</span></span><span>⌄</span></div><div class="hIlkoa_sessionRow hIlkoa_selected"><span class="hIlkoa_title">给今天的小想法，找一个开始</span></div><div class="hIlkoa_sessionRow">整理我的小书桌</div><div class="hIlkoa_sessionRow">周末的灵感清单</div></div>`;}
+function daily(){return `<div data-dsh-usage-foot-card><div class="cvtkAW_footCard sample-card"><div class="row"><b>今日消耗</b><b>¥0.00</b></div><hr><p>今日暂无用量</p><small>演示数据 · 非真实账户</small></div></div>`;}
+function account(){return `<div class="ET65mq_root"><div class="ET65mq_trigger row"><span class="avatar">W</span><div><small>我的账户</small><br>Whale Desk Demo</div><span>⌄</span></div></div>`;}
+function sidebar(){return `<aside class="_2H3hWW_root"><div class="_2H3hWW_logoRow"><button>${img('desk/brand.svg','brand')}</button></div><button class="demo_newSession"><span class="demo_newSessionLabel">⊕ 新会话</span></button><nav class="navlinks"><div>♧　插件</div><div>◷　自动化任务</div><div>▤　任务看板</div></nav><div class="row workspace-label"><b>工作区</b><span>⌕　☷　＋</span></div>${workspaceDirectory()}<div class="side-spacer"></div>${daily()}<div class="_2H3hWW_footArea"></div>${account()}</aside>`;}
+const code=`<div class="md-code-block"><div data-code-block-banner><b>TypeScript</b><span class="spacer"></span><span>复制　换行</span></div><pre><code><span class="token-key">const</span> ideas = [<span class="token-string">'一盏暖灯'</span>, <span class="token-string">'一个小开始'</span>];\n\n<span class="token-key">function</span> makeTodayGentle() {\n  <span class="token-key">return</span> ideas.map(idea =&gt; ({ idea, ready: true }));\n}</code></pre></div>`;
+function messages(){return `<div class="conversation-sample"><div class="cJsG2q_bubble">帮我把零散的想法整理成一个温柔的小计划吧。</div><div data-chat-flow-kind="assistant-step"><div class="v5IAXa_root"><div class="v5IAXa_body"><p>当然。我们先从一件容易完成的小事开始。</p><ol><li>把脑海里的想法先写下来。</li><li>选择今天最想推进的一件事。</li><li>留一点空白，给休息和新的灵感。</li></ol>${code}<p>不用一下做完，慢慢来就很好。</p></div></div></div></div>`;}
+const settingsLabels=['账号与余额','通用设置','模型','内置插件','Agent 预设','已归档会话','Web 插件','皮肤','宠物','创意工坊','使用统计'];
+function settings(type='usage'){const selected=type==='account'?0:10;return `<div data-shortcut-modal="settings" class="wCInkW_panel"><nav>${settingsLabels.map((s,i)=>`<div class="wCInkW_navCell" ${i===selected?'aria-current="true"':''}>${s}</div>`).join('')}</nav><div class="wCInkW_options"><header class="setting-header"><h2>${settingsLabels[selected]}</h2><span>✕</span></header>${type==='account'?card('我的账户',row('Whale Desk Demo','示例账户')+'<hr>'+row('当前余额','¥0.00')+row('登录状态','静态示例')):card('用量概览','<div class="tabs">'+label('用量')+label('个人套餐')+label('Token 银行')+'</div><div class="metric-grid"><div><b>0</b><span>今日 Token</span></div><div><b>¥0.00</b><span>今日消耗</span></div><div><b>0</b><span>调用次数</span></div></div><p class="muted">这里展示布局，不包含真实用量数据。</p>')}</div></div>`;}
+export function fullScene(kind){return `<div class="windowbar"><span>◫　应用　编辑</span><span>Whale Desk · 静态界面示例</span><span>—　□　×</span></div><div class="app-shell" data-dsh-frame>${sidebar()}<main data-conversation-region="chat" class="main-scene ${kind==='home'?'home-scene':''}">${kind==='home'||kind==='settings'?'<div class="Dc7zOa_headerBlank"><div class="Dc7zOa_titleRow"></div></div>':conversationTitle}${kind==='home'?`<div class="hero-content"><div class="Hqq-bq_headline"><div class="Hqq-bq_titleGroup"><span>探索未至之境</span><span class="Hqq-bq_previewBadge">预览版</span></div></div>${composer()}</div>`:kind==='messages'?`<div class="reading-area">${messages()}</div><div class="bottom-composer">${composer()}</div>`:`<div class="settings-stage">${settings()}</div>`}</main></div>`;}
+function notices(open){return `<div data-turn-trigger><button aria-expanded="${open}"><span>✉</span><span>每日灵感整理</span><time>09:00</time></button>${open?'<div><p>自动化计划触发了这一轮对话</p><div>整理今天的小目标，并保留一段安静的阅读时间。<br>示例通知，不会执行任务。</div></div>':''}</div>`;}
+function files(changes=false){return card(changes?'文件变更':'已准备好的小成果',`<div class="files-grid">${[['report.docx','文档','journal-file-doc-v152.svg'],['ideas.md','Markdown','journal-file-code-v152.svg'],['preview.png','图片','journal-file-image-v152.svg']].map(([name,type])=>`<div class="cJsG2q_fileCard"><span class="file-symbol">${type==='图片'?'▧':type==='文档'?'▤':'⌘'}</span><div><b>${name}</b><p>${changes?'+24　−3':type+' · 示例文件'}</p></div></div>`).join('')}</div>`);}
+function taskboard(){return `<div class="_7D6uKa_board sample-page"><div class="page-title"><h2>任务看板</h2>${button('＋ 新建任务')}</div><div class="board-columns">${[['待办',['收集灵感','整理资料']],['进行中',['打磨小书桌']],['已完成',['选好今天的配色']]].map(([title,tasks],i)=>`<section><h3>${title} <small>${tasks.length}</small></h3>${tasks.map((task,j)=>`<article class="_7D6uKa_card sample-card"><small>WHALE-${i+1}${j+1}</small><h3>${task}</h3><p class="muted">给每一个想法留一个位置。</p>${label(i===2?'已完成':'设计 · 示例')}</article>`).join('')}</section>`).join('')}</div></div>`;}
+function automation(detail=false){return `<div class="S0jZwq_page sample-page"><div class="page-title"><h2>自动化任务</h2>${button('＋ 新建')}</div><div class="S0jZwq_pageContent">${detail?card('每日灵感整理',row('计划','每天 09:00')+row('状态','暂停 · 示例')+'<hr><p>帮我整理当天的灵感，留下最值得继续的一件事。</p><div class="tabs">'+button('编辑计划')+button('查看会话')+'</div>','S0jZwq_detail'):`<div class="tabs">${label('全部')}${label('进行中')}${label('已暂停')}</div>${['每日灵感整理','每周工作台回顾'].map((t,i)=>`<article class="S0jZwq_row sample-card">${row('<b>'+t+'</b>',i?'每周五 18:00':'每天 09:00')}<p class="muted">暂停 · 不会实际运行</p></article>`).join('')}`}</div></div>`;}
+function plugins(){return `<div class="fO69Vq_page sample-page"><h2>插件</h2><p class="muted">为小书桌添一点顺手的工具</p><div class="plugin-grid">${[['任务看板','把想法整理成一步一步的小任务'],['Git graph','查看项目的分支与提交'],['桌宠','让熟悉的小伙伴陪你工作'],['皮肤中心','挑选今天喜欢的工作台']].map(([t,d])=>card(t,'<p>'+d+'</p>'+label('展示示例'),'fO69Vq_card')).join('')}</div></div>`;}
+function question(){return `<div data-question-key="demo" class="mAtvLq_frame"><div class="mAtvLq_card"><header class="mAtvLq_header"><h3 class="mAtvLq_title">今天想先从哪里开始？</h3><span class="mAtvLq_headerActions"></span></header><div class="mAtvLq_options">${['整理待办，让思路更清楚','写下一个新想法','先看看昨天的进展'].map((s,i)=>`<div class="mAtvLq_option ${i===0?'selected':''}">${i===0?'◉':'○'}　${s}</div>`).join('')}</div><footer class="mAtvLq_footer"><span class="muted">示例问题，不会提交答案</span><span class="mAtvLq_footerActions">${button('继续')}</span></footer></div></div>`;}
+function workspace(){return `<div data-sidebar-right-guide><h2>你的工作台</h2><p>文件、终端和浏览器，都在这里。</p><div class="tool-grid">${[['▱','项目文件'],['⌘','终端'],['◎','浏览器']].map(([i,n])=>card(i,'<b>'+n+'</b><p class="muted">打开并继续工作</p>')).join('')}</div></div>`;}
+function remote(){return `<div class="fThDlq_panel" role="dialog"><div class="fThDlq_header"><h2 class="fThDlq_title">远程访问</h2></div><p>在其他设备上打开同一份工作台。</p>${card('连接状态',row('远程访问','未开启')+'<p class="muted">静态示例 · 未展示真实地址、二维码或访问令牌。</p>')}${card('使用说明','<p>连接条件和授权由 DSH 管理。此图只展示面板样式。</p>')}</div>`;}
+export const scenes = [
+ ['new-conversation','新会话按钮','首页与侧栏',()=>`<div class="_2H3hWW_root standalone-sidebar"><button class="demo_newSession"><span class="demo_newSessionLabel">⊕ 新会话</span></button></div>`],
+ ['workspace-directory','工作区目录与会话列表','首页与侧栏',()=>`<div class="_2H3hWW_root standalone-sidebar">${workspaceDirectory()}</div>`],
+ ['planes','会话小飞机与运行状态','首页与侧栏',()=>`<div class="_2H3hWW_root standalone-sidebar">${['当前会话','正在整理灵感','后台任务'].map((s,i)=>`<div class="hIlkoa_sessionRow ${i===0?'hIlkoa_selected':''}" ${i===0?'data-cg-active="1"':''}><span class="hIlkoa_slot" ${i?'data-cg-spin="'+(i===1?'gold':'blue')+'"':''}></span><span>${s}</span></div>`).join('')}<p class="muted">状态为预设示例，不代表实际任务。</p></div>`],
+ ['workspace-hover','工作区悬浮信息','首页与侧栏',()=>card('默认工作区',row('位置','/demo/whale-desk')+row('最近活动','刚刚')+'<p>把喜欢的想法，慢慢整理好。</p>')],
+ ['session-hover','会话悬浮信息','首页与侧栏',()=>card('给今天的小想法，找一个开始',row('最后更新','10 分钟前')+row('消息数','4 条示例')+'<hr><p>整理灵感、选择一个目标，并为休息留白。</p>')],
+ ['view-options','侧栏视图选项','首页与侧栏',()=>menu('视图选项',['✓ 按工作区分组','　显示最近会话','　显示已归档','　紧凑模式'])],
+ ['account','个人账户卡','首页与侧栏',account],
+ ['account-menu','账户菜单','首页与侧栏',()=>menu('Whale Desk Demo',['我的账户','设置','帮助与反馈','退出登录'])],
+ ['daily-usage','今日用量与余额','首页与侧栏',daily],
+ ['messages','用户消息与助手回复','对话与阅读',messages],
+ ['code-fold','代码块与语言栏','对话与阅读',()=>`<div class="v5IAXa_root"><div class="v5IAXa_body">${code}</div></div>`],
+ ['session-heading','当前会话标题','对话与阅读',()=>conversationTitle],
+ ['trigger-closed','触发通知 · 收起','对话与阅读',()=>notices(false)],
+ ['trigger-open','触发通知 · 展开','对话与阅读',()=>notices(true)],
+ ['question-pad','交互问答面板','对话与阅读',question],
+ ['composer','输入托盘与会话选项','输入与发送',composer],
+ ['send-controls','发送、运行与插话','输入与发送',()=>card('不同阶段，都有清晰的动作','<div class="actions-demo">'+['↑ 发送','■ 停止','↗ 插话','◷ 排队'].map(s=>button(s,'RlGAzG_primary')).join('')+'</div><p class="muted">按钮状态示意，不会发送内容。</p>')],
+ ['queued-message','排队消息','输入与发送',()=>card('下一条小想法','<p>再帮我补一份简单的检查清单。</p><hr><div class="actions-demo">'+button('↗ 插话')+button('✎ 编辑')+button('移除')+'</div>')],
+ ['model-selector','模型选择','输入与发送',()=>menu('选择模型',['✓ DeepSeek-V4.1-Flash　High','　推理强度　Standard','　模型能力与说明'],'wq12jW_menu')],
+ ['permission-picker','权限模式','输入与发送',()=>menu('权限模式 · 外观示例',['✓ 工作区内修改','　只读','　完全权限'])],
+ ['full-access','权限确认面板','输入与发送',()=>card('完全权限 · 示例面板','<p>此处仅展示原生确认面板的样式。</p><p class="muted">实际权限范围、说明和确认由 DSH 提供。本预览不会更改权限。</p><hr><label>□ 我已阅读说明（示例）</label><div class="actions-demo">'+button('取消')+'<button disabled>确认</button></div>')],
+ ['add-command','添加与指令','输入与发送',()=>menu('添加与指令',['＋ 添加文件','⌘ 调用指令','＠ 引用文件或对话','♧ 选择技能'])],
+ ['subagents','子智能体任务列表','任务与插件',()=>`<div class="oXE0lW_menu">${row('成员','状态')}${row('01　资料整理','进行中')}${row('02　方案检查','等待')}${row('03　文档编写','完成')}<p class="muted">虚构成员与任务</p></div>`],
+ ['todos','对话待办','任务与插件',()=>`<div data-testid="todo-panel"><h3>今天的小计划</h3>${row('✓ 收集灵感','已完成')}${row('◉ 选择一个目标','进行中')}${row('○ 整理交付清单','待办')}</div>`],
+ ['taskboard','任务看板','任务与插件',taskboard],
+ ['automation-planner','自动化计划列表','任务与插件',()=>automation(false)],
+ ['automation-detail','自动化任务详情','任务与插件',()=>automation(true)],
+ ['automation-card','对话中的计划卡','任务与插件',()=>card('◷ 每日灵感整理',row('执行计划','每天 09:00')+row('状态','暂停')+button('查看计划'),'S0jZwq_row')],
+ ['plugin-page','插件管理','任务与插件',plugins],
+ ['files','交付文件','文件与工作工具',()=>files(false)],
+ ['changed-files','文件变更摘要','文件与工作工具',()=>files(true)],
+ ['workspace','右侧工作台入口','文件与工作工具',workspace],
+ ['session-menu','会话更多菜单','文件与工作工具',()=>menu('会话选项',['下载 Session 日志','反馈问题','查看会话信息'])],
+ ['open-in-app','打开方式菜单','文件与工作工具',()=>menu('打开方式',['默认应用','文件管理器','复制文件路径'])],
+ ['stats','会话统计与上下文','文件与工作工具',()=>`<div class="metric-panels">${card('用时',row('模型','12 秒')+row('工具','4 秒'))}${card('Token',row('输入','1,024')+row('输出','512'))}${card('上下文',row('当前占用','8%')+'<div class="progress"><i></i></div>')}</div><p class="muted">仅为示例数据</p>`],
+ ['remote-book','远程访问面板','专用窗口与设置',remote],
+ ['session-preview','归档会话预览','专用窗口与设置',()=>card('归档会话预览',row('会话','周末的灵感清单')+row('归档日期','2026-10-21')+'<hr><div class="cJsG2q_bubble">帮我留下这周最喜欢的三个想法。</div><p>先记录下来，等下一次慢慢展开。</p>','yoSR5W_modal')],
+ ['update-tip','更新入口与下载提示','专用窗口与设置',()=>card('有一个新版本可以看看',row('Whale Desk','v1.1.1')+'<div class="progress"><i style="width:62%"></i></div><p class="muted">下载进度 62% · 静态示例</p>'+button('查看更新'))],
+ ['settings-account','设置 · 账号与余额','专用窗口与设置',()=>settings('account')],
+ ['settings-usage','设置 · 使用统计','专用窗口与设置',()=>settings('usage')]
+].map(([id,title,group,render])=>({id,title,group,render}));
+export function documentHtml(content,title,theme,{full=false}={}){return `<!doctype html><html lang="zh-CN" data-dsh-skin="whale-desk"><head><meta charset="utf-8"><link rel="stylesheet" href="/scripts/preview-layout.css"><link rel="stylesheet" href="/skins/whale-desk/skin.css"><link rel="stylesheet" href="/skins/whale-desk/patches.css"><title>${title}</title></head><body ${theme==='dark'?'data-ds-dark-theme="true"':''} class="${full?'full-preview':'component-preview'}"><div class="documentation-label"><span>WHALE DESK · ${theme==='dark'?'晚灯 / DARK':'日光 / LIGHT'}</span><span>${full?'静态界面预览':'静态组件预览'} · 虚构示例数据</span></div>${full?content:`<header class="documentation-heading"><h1>${title}</h1><p>奶油暖木 · 水彩鲸伴 · 紫粉柔字</p></header><div class="component-stage" data-conversation-region="chat"><div class="component-content">${content}</div></div>`}<footer class="documentation-footer">Whale Desk 1.1.1 · CSS 展示，不代表完整实机回归</footer></body></html>`;}

@@ -62,6 +62,22 @@ if (!patch.trimEnd().endsWith(override)) failures.push('Finishing layer differs:
 if (hash(fs.readFileSync(path.join(skin, 'preview/desk.png'))) !== hash(fs.readFileSync(path.join(skin, 'assets/desk/home.png')))) failures.push('Catalog art must match documented wallpaper preview');
 globalThis.WhaleDeskConfig.normalize({});
 for (const font of ['assets/LXGWWenKai-Medium.ttf', 'assets/LongCang-Regular-v215.ttf', 'assets/LXGWWenKai-OFL.txt', 'assets/LongCang-OFL-v215.txt']) reference(manifestPath, font);
+const previewManifest = JSON.parse(fs.readFileSync(path.join(root, 'docs/PREVIEW-MANIFEST.json'), 'utf8'));
+const previewFiles = [...previewManifest.components, ...previewManifest.screens, ...previewManifest.artwork];
+if (previewManifest.components.length !== 80 || previewManifest.screens.length !== 6 || previewManifest.artwork.length !== 14) failures.push('Incomplete preview gallery');
+if (new Set(previewFiles.map(x => x.file)).size !== 100) failures.push('Duplicate preview gallery entries');
+const categories = new Set(previewManifest.components.map(x => x.id));
+if (categories.size !== 40) failures.push('Expected 40 component categories');
+for (const id of categories) for (const theme of ['light', 'dark']) {
+  if (!previewManifest.components.some(x => x.id === id && x.theme === theme)) failures.push('Missing theme: ' + id + '/' + theme);
+}
+for (const item of previewFiles) {
+  const file = path.resolve(root, item.file);
+  if (!file.startsWith(root) || !fs.existsSync(file)) { failures.push('Missing preview: ' + item.file); continue; }
+  const bytes = fs.readFileSync(file);
+  if (hash(bytes) !== item.sha256) failures.push('Preview hash mismatch: ' + item.file);
+  if (bytes.toString('hex', 0, 8) !== '89504e470d0a1a0a' || bytes.readUInt32BE(16) !== item.width || bytes.readUInt32BE(20) !== item.height) failures.push('Preview dimensions/format mismatch: ' + item.file);
+}
 const largest = files.map(file => ({ path: rel(file), bytes: fs.statSync(file).size })).sort((a, b) => b.bytes - a.bytes)[0];
 if (failures.length) { console.error(failures.join('\n')); process.exitCode = 1; }
-else console.log(JSON.stringify({ status: 'PASS', version: manifest.version, files: files.length, localReferences: references, artworkHashes: artHashes, embeddedRasterHashes: 14, largestFile: largest, runtimeRegression: 'pending; see docs/TESTING.md' }, null, 2));
+else console.log(JSON.stringify({ status: 'PASS', version: manifest.version, files: files.length, localReferences: references, artworkHashes: artHashes, embeddedRasterHashes: 14, previewHashes: previewFiles.length, componentCategories: categories.size, largestFile: largest, runtimeRegression: 'pending; see docs/TESTING.md' }, null, 2));

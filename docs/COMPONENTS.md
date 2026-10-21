@@ -1,119 +1,720 @@
 # 组件与配图
 
-[返回首页](../README.md) · [逐项功能对照](PARITY.md) · [打开离线素材画廊](gallery.html)
+[返回首页](../README.md) · [离线画廊](gallery.html) · [功能对照](PARITY.md) · [验证状态](TESTING.md)
 
-本页展示实际随包素材与界面适配说明。图片是配图，不是组件实机截图；不复制原手账皮肤的截图作为本项目证据。完整操作验证状态见 [TESTING.md](TESTING.md)。
+完整展示包含 **6 张界面预览、40 类组件 × 浅深两色共 80 张预览、14 张独立配图**。栏目与上游组件文件名逐项对齐，额外补齐了上游四个仅有浅色预览的深色版本。
 
-## 首页 · 奶油暖木与水彩
+界面与组件图片由随包 CSS 加文档示例布局渲染，使用虚构数据，并非 DSH 实机截图。菜单与面板仅展示静态外观，示例 DOM 不保证与每个宿主版本完全一致；这些图片不能证明交互无 bug。配图是现有素材的原像素导出。
 
-![书桌背景](../skins/whale-desk/assets/desk/home.png)
+## 导览
 
-大鲸鱼玩偶在左，鲸鱼娘坐在右侧；中间留给欢迎标题与输入区。背景不含交互控件。
+- **首页与侧栏**：[新会话按钮](#new-conversation) · [工作区目录与会话列表](#workspace-directory) · [会话小飞机与运行状态](#planes) · [工作区悬浮信息](#workspace-hover) · [会话悬浮信息](#session-hover) · [侧栏视图选项](#view-options) · [个人账户卡](#account) · [账户菜单](#account-menu) · [今日用量与余额](#daily-usage)
+- **对话与阅读**：[用户消息与助手回复](#messages) · [代码块与语言栏](#code-fold) · [当前会话标题](#session-heading) · [触发通知 · 收起](#trigger-closed) · [触发通知 · 展开](#trigger-open) · [交互问答面板](#question-pad)
+- **输入与发送**：[输入托盘与会话选项](#composer) · [发送、运行与插话](#send-controls) · [排队消息](#queued-message) · [模型选择](#model-selector) · [权限模式](#permission-picker) · [权限确认面板](#full-access) · [添加与指令](#add-command)
+- **任务与插件**：[子智能体任务列表](#subagents) · [对话待办](#todos) · [任务看板](#taskboard) · [自动化计划列表](#automation-planner) · [自动化任务详情](#automation-detail) · [对话中的计划卡](#automation-card) · [插件管理](#plugin-page)
+- **文件与工作工具**：[交付文件](#files) · [文件变更摘要](#changed-files) · [右侧工作台入口](#workspace) · [会话更多菜单](#session-menu) · [打开方式菜单](#open-in-app) · [会话统计与上下文](#stats)
+- **专用窗口与设置**：[远程访问面板](#remote-book) · [归档会话预览](#session-preview) · [更新入口与下载提示](#update-tip) · [设置 · 账号与余额](#settings-account) · [设置 · 使用统计](#settings-usage)
 
-## 顶栏与输入托盘 · 水彩摆件
+## 全界面
 
-![鲸鱼、雏菊与文具](../skins/whale-desk/assets/desk/watercolor-vignette.png)
+### 首页
 
-透明素材用于顶栏、输入区边缘和部分空状态。使用 CSS 装饰层，不承担按钮操作。
+| 日光 · 浅色 | 晚灯 · 深色 |
+| --- | --- |
+| ![首页浅色](../evidence/whale-desk-light.png) | ![首页深色](../evidence/whale-desk-dark.png) |
 
-## 组件如何改变
+### 对话
 
-| 模块 | 本版处理 | 原生功能 |
-| --- | --- | --- |
-| 品牌与欢迎标题 | 紫粉品牌字标，龙藏体“探索未至之境” | 原有入口和标题保留 |
-| 侧栏 | 单一奶油整理区、浅木侧边、淡紫选中态 | 工作区、搜索、会话、用量、账号 |
-| 输入区 | 760 px 最大宽、木沿卡片和小幅水彩花饰 | 输入、文件、模型、工作区与模式 |
-| 对话 | 柔紫用户气泡、奶油助手卡、紫粉署名 | Markdown、展开及原生操作 |
-| 代码 | 柔紫标题栏和圆角外框 | 复制、换行、等宽与语法配色 |
-| 菜单 | 奶油底、细紫边和清晰选中态 | 原生选项、键盘焦点和禁用态 |
-| 任务与自动化 | 奶油卡片、水彩空状态 | 状态、列表、详情和创建入口 |
-| 设置 | 浅木外框、柔紫左栏、独立页面配图 | 各设置的原生逻辑 |
-| 右侧工作台 | 木沿工具盘与水彩小摆件 | 项目文件、终端、浏览器入口 |
+| 日光 · 浅色 | 晚灯 · 深色 |
+| --- | --- |
+| ![对话浅色](../evidence/whale-desk-messages-light.png) | ![对话深色](../evidence/whale-desk-messages-dark.png) |
 
-触发通知、问答、待办等次级组件仍保留部分上游手绘装饰；色彩已统一，不把这些描述成已全部重新绘制。
+### 设置
 
-## 设置与侧栏插画
+| 日光 · 浅色 | 晚灯 · 深色 |
+| --- | --- |
+| ![设置浅色](../evidence/whale-desk-settings-light.png) | ![设置深色](../evidence/whale-desk-settings-dark.png) |
 
-以下 13 个位置保留上游原始插画像素，调整 SVG 外框；原始首页图片也留在素材包中作为来源记录，但不再用于首页。
+## 首页与侧栏
+
+<a id="new-conversation"></a>
+
+### 新会话按钮
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![新会话按钮浅色](components/new-conversation-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![新会话按钮深色](components/new-conversation-dark.png)
+
+</details>
+
+<a id="workspace-directory"></a>
+
+### 工作区目录与会话列表
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![工作区目录与会话列表浅色](components/workspace-directory-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![工作区目录与会话列表深色](components/workspace-directory-dark.png)
+
+</details>
+
+<a id="planes"></a>
+
+### 会话小飞机与运行状态
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![会话小飞机与运行状态浅色](components/planes-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![会话小飞机与运行状态深色](components/planes-dark.png)
+
+</details>
+
+<a id="workspace-hover"></a>
+
+### 工作区悬浮信息
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![工作区悬浮信息浅色](components/workspace-hover-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![工作区悬浮信息深色](components/workspace-hover-dark.png)
+
+</details>
+
+<a id="session-hover"></a>
+
+### 会话悬浮信息
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![会话悬浮信息浅色](components/session-hover-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![会话悬浮信息深色](components/session-hover-dark.png)
+
+</details>
+
+<a id="view-options"></a>
+
+### 侧栏视图选项
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![侧栏视图选项浅色](components/view-options-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![侧栏视图选项深色](components/view-options-dark.png)
+
+</details>
+
+<a id="account"></a>
+
+### 个人账户卡
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![个人账户卡浅色](components/account-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![个人账户卡深色](components/account-dark.png)
+
+</details>
+
+<a id="account-menu"></a>
+
+### 账户菜单
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![账户菜单浅色](components/account-menu-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![账户菜单深色](components/account-menu-dark.png)
+
+</details>
+
+<a id="daily-usage"></a>
+
+### 今日用量与余额
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![今日用量与余额浅色](components/daily-usage-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![今日用量与余额深色](components/daily-usage-dark.png)
+
+</details>
+
+## 对话与阅读
+
+<a id="messages"></a>
+
+### 用户消息与助手回复
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![用户消息与助手回复浅色](components/messages-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![用户消息与助手回复深色](components/messages-dark.png)
+
+</details>
+
+<a id="code-fold"></a>
+
+### 代码块与语言栏
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![代码块与语言栏浅色](components/code-fold-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![代码块与语言栏深色](components/code-fold-dark.png)
+
+</details>
+
+<a id="session-heading"></a>
+
+### 当前会话标题
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![当前会话标题浅色](components/session-heading-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![当前会话标题深色](components/session-heading-dark.png)
+
+</details>
+
+<a id="trigger-closed"></a>
+
+### 触发通知 · 收起
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![触发通知 · 收起浅色](components/trigger-closed-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![触发通知 · 收起深色](components/trigger-closed-dark.png)
+
+</details>
+
+<a id="trigger-open"></a>
+
+### 触发通知 · 展开
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![触发通知 · 展开浅色](components/trigger-open-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![触发通知 · 展开深色](components/trigger-open-dark.png)
+
+</details>
+
+<a id="question-pad"></a>
+
+### 交互问答面板
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![交互问答面板浅色](components/question-pad-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![交互问答面板深色](components/question-pad-dark.png)
+
+</details>
+
+## 输入与发送
+
+<a id="composer"></a>
+
+### 输入托盘与会话选项
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![输入托盘与会话选项浅色](components/composer-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![输入托盘与会话选项深色](components/composer-dark.png)
+
+</details>
+
+<a id="send-controls"></a>
+
+### 发送、运行与插话
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![发送、运行与插话浅色](components/send-controls-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![发送、运行与插话深色](components/send-controls-dark.png)
+
+</details>
+
+<a id="queued-message"></a>
+
+### 排队消息
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![排队消息浅色](components/queued-message-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![排队消息深色](components/queued-message-dark.png)
+
+</details>
+
+<a id="model-selector"></a>
+
+### 模型选择
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![模型选择浅色](components/model-selector-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![模型选择深色](components/model-selector-dark.png)
+
+</details>
+
+<a id="permission-picker"></a>
+
+### 权限模式
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![权限模式浅色](components/permission-picker-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![权限模式深色](components/permission-picker-dark.png)
+
+</details>
+
+<a id="full-access"></a>
+
+### 权限确认面板
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![权限确认面板浅色](components/full-access-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![权限确认面板深色](components/full-access-dark.png)
+
+</details>
+
+<a id="add-command"></a>
+
+### 添加与指令
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![添加与指令浅色](components/add-command-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![添加与指令深色](components/add-command-dark.png)
+
+</details>
+
+## 任务与插件
+
+<a id="subagents"></a>
+
+### 子智能体任务列表
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![子智能体任务列表浅色](components/subagents-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![子智能体任务列表深色](components/subagents-dark.png)
+
+</details>
+
+<a id="todos"></a>
+
+### 对话待办
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![对话待办浅色](components/todos-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![对话待办深色](components/todos-dark.png)
+
+</details>
+
+<a id="taskboard"></a>
+
+### 任务看板
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![任务看板浅色](components/taskboard-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![任务看板深色](components/taskboard-dark.png)
+
+</details>
+
+<a id="automation-planner"></a>
+
+### 自动化计划列表
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![自动化计划列表浅色](components/automation-planner-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![自动化计划列表深色](components/automation-planner-dark.png)
+
+</details>
+
+<a id="automation-detail"></a>
+
+### 自动化任务详情
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![自动化任务详情浅色](components/automation-detail-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![自动化任务详情深色](components/automation-detail-dark.png)
+
+</details>
+
+<a id="automation-card"></a>
+
+### 对话中的计划卡
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![对话中的计划卡浅色](components/automation-card-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![对话中的计划卡深色](components/automation-card-dark.png)
+
+</details>
+
+<a id="plugin-page"></a>
+
+### 插件管理
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![插件管理浅色](components/plugin-page-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![插件管理深色](components/plugin-page-dark.png)
+
+</details>
+
+## 文件与工作工具
+
+<a id="files"></a>
+
+### 交付文件
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![交付文件浅色](components/files-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![交付文件深色](components/files-dark.png)
+
+</details>
+
+<a id="changed-files"></a>
+
+### 文件变更摘要
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![文件变更摘要浅色](components/changed-files-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![文件变更摘要深色](components/changed-files-dark.png)
+
+</details>
+
+<a id="workspace"></a>
+
+### 右侧工作台入口
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![右侧工作台入口浅色](components/workspace-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![右侧工作台入口深色](components/workspace-dark.png)
+
+</details>
+
+<a id="session-menu"></a>
+
+### 会话更多菜单
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![会话更多菜单浅色](components/session-menu-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![会话更多菜单深色](components/session-menu-dark.png)
+
+</details>
+
+<a id="open-in-app"></a>
+
+### 打开方式菜单
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![打开方式菜单浅色](components/open-in-app-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![打开方式菜单深色](components/open-in-app-dark.png)
+
+</details>
+
+<a id="stats"></a>
+
+### 会话统计与上下文
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![会话统计与上下文浅色](components/stats-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![会话统计与上下文深色](components/stats-dark.png)
+
+</details>
+
+## 专用窗口与设置
+
+<a id="remote-book"></a>
+
+### 远程访问面板
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![远程访问面板浅色](components/remote-book-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![远程访问面板深色](components/remote-book-dark.png)
+
+</details>
+
+<a id="session-preview"></a>
+
+### 归档会话预览
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![归档会话预览浅色](components/session-preview-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![归档会话预览深色](components/session-preview-dark.png)
+
+</details>
+
+<a id="update-tip"></a>
+
+### 更新入口与下载提示
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![更新入口与下载提示浅色](components/update-tip-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![更新入口与下载提示深色](components/update-tip-dark.png)
+
+</details>
+
+<a id="settings-account"></a>
+
+### 设置 · 账号与余额
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![设置 · 账号与余额浅色](components/settings-account-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![设置 · 账号与余额深色](components/settings-account-dark.png)
+
+</details>
+
+<a id="settings-usage"></a>
+
+### 设置 · 使用统计
+
+浅色与深色静态示例，功能行为由 DSH 宿主提供。
+
+![设置 · 使用统计浅色](components/settings-usage-light.png)
+
+<details>
+<summary>查看深色版本</summary>
+
+![设置 · 使用统计深色](components/settings-usage-dark.png)
+
+</details>
+
+## 完整配图库
+
+首页使用新生成的水彩书桌，其余 13 张继承插画保留原像素。导出图仅便于 GitHub 浏览，不替换皮肤内 SVG。来源与许可见 [ARTWORK.json](../skins/whale-desk/ARTWORK.json) 和 [LICENSE-ARTWORK](../LICENSE-ARTWORK)。
+
+### 首页 · 水彩小书桌
+
+![鲸伴水彩小书桌](artwork/home.png)
 
 ### 设置-账号与余额
 
-![设置-账号与余额：鲸鱼存钱罐](../skins/whale-desk/assets/diy-generated/account.svg)
-
-鲸鱼存钱罐。
+![鲸鱼存钱罐](artwork/account.png)
 
 ### 设置-通用设置
 
-![设置-通用设置：整理晨间小屋](../skins/whale-desk/assets/diy-generated/general.svg)
-
-整理晨间小屋。
+![整理晨间小屋](artwork/general.png)
 
 ### 设置-模型
 
-![设置-模型：星图学习时间](../skins/whale-desk/assets/diy-generated/models.svg)
-
-星图学习时间。
+![星图学习时间](artwork/models.png)
 
 ### 设置-内置插件
 
-![设置-内置插件：拼好一只小鲸鱼](../skins/whale-desk/assets/diy-generated/plugins.svg)
-
-拼好一只小鲸鱼。
+![拼好一只小鲸鱼](artwork/plugins.png)
 
 ### 设置-Agent预设
 
-![设置-Agent预设：准备下一次冒险](../skins/whale-desk/assets/diy-generated/presets.svg)
-
-准备下一次冒险。
+![准备下一次冒险](artwork/presets.png)
 
 ### 设置-已归档会话
 
-![设置-已归档会话：收藏温柔回忆](../skins/whale-desk/assets/diy-generated/archive.svg)
-
-收藏温柔回忆。
+![收藏温柔回忆](artwork/archive.png)
 
 ### 设置-Web插件
 
-![设置-Web插件：海边电话](../skins/whale-desk/assets/diy-generated/web.svg)
-
-海边电话。
+![海边电话](artwork/web.png)
 
 ### 设置-皮肤
 
-![设置-皮肤：挑选今日配色](../skins/whale-desk/assets/diy-generated/skins.svg)
-
-挑选今日配色。
+![挑选今日配色](artwork/skins.png)
 
 ### 设置-宠物
 
-![设置-宠物：草地上的小伙伴](../skins/whale-desk/assets/diy-generated/pets.svg)
-
-草地上的小伙伴。
+![草地上的小伙伴](artwork/pets.png)
 
 ### 设置-创意工坊
 
-![设置-创意工坊：手账文具小摊](../skins/whale-desk/assets/diy-generated/workshop.svg)
-
-手账文具小摊。
+![手账文具小摊](artwork/workshop.png)
 
 ### 设置-使用统计
 
-![设置-使用统计：数一数今日星光](../skins/whale-desk/assets/diy-generated/usage.svg)
-
-数一数今日星光。
+![数一数今日星光](artwork/usage.png)
 
 ### 设置界面左栏
 
-![设置界面左栏：拿手账招手的透明贴纸](../skins/whale-desk/assets/diy-generated/settings-sidebar.svg)
-
-拿手账招手的透明贴纸。
+![拿手账招手的透明贴纸](artwork/settings-sidebar.png)
 
 ### 主界面左栏
 
-![主界面左栏：休息一小会](../skins/whale-desk/assets/diy-generated/main-sidebar.svg)
+![休息一小会](artwork/main-sidebar.png)
 
-休息一小会。
+### 新增水彩装饰
 
-## 桌宠说明
+![水彩鲸鱼与花饰](../skins/whale-desk/assets/desk/watercolor-vignette.png)
 
-“设置—宠物”的图片是装饰插画。真正桌宠的动作、菜单和拖动由独立宠物包决定，本仓库不包含其动画或私有配置。
+## 文件与复现
+
+- `components/`：80 张组件预览，保持上游组件命名。
+- `artwork/`：14 张独立配图。
+- `../evidence/`：6 张全界面静态预览，性质见该目录 README。
+- [PREVIEW-MANIFEST.json](PREVIEW-MANIFEST.json)：100 张图片的来源、尺寸和 SHA-256。
+- [预览生成说明](PREVIEWS.md)：重新渲染和校验方法。
