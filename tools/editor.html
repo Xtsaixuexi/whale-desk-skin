@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'none'">
+<title>鲸伴 · 装扮我的小书桌</title>
+<link rel="stylesheet" href="editor.css">
+<script defer src="config-core.js"></script><script defer src="editor.js"></script>
+</head>
+<body>
+<header><p class="eyebrow">WHALE DESK · YOUR LITTLE CORNER</p><h1>装扮我的小书桌</h1><p>从一抹喜欢的颜色开始。设置只留在你的电脑里。</p></header>
+<main>
+<section class="controls" aria-label="皮肤配置">
+<div class="toolbar"><button id="import">导入配置</button><input id="import-file" type="file" accept="application/json,.json" hidden><button id="reset">恢复默认</button><button id="export" class="primary">导出配置</button></div>
+<p id="status" role="status">导出后，按页面下方说明应用到皮肤。</p>
+<fieldset><legend>书写的感觉</legend>
+<label>顶栏题字 <input id="motto" maxlength="24" value="让灵感，慢慢发芽"></label>
+<label>输入框最大宽度 <span><input id="composerWidth" type="range" min="560" max="1100" step="10"><output id="width-value"></output></span></label>
+<label>输入字号 <span><input id="fontSize" type="range" min="14" max="20"><output id="size-value"></output></span></label>
+<label>界面字体 <select id="font"><option value="wenkai">霞鹜文楷 · 温柔手写</option><option value="system">系统字体 · 清晰简洁</option></select></label>
+<label class="check"><input id="decorations" type="checkbox"> 显示水彩小摆件</label>
+</fieldset>
+<fieldset><legend>挑一组舒服的颜色</legend><div class="tabs"><button data-theme="light" aria-pressed="true">日光 · 浅色</button><button data-theme="dark" aria-pressed="false">晚灯 · 深色</button></div><div id="colors"></div><p class="hint">正文、次要文字及强调色与底色须达到 4.5:1，未通过时会提示。</p></fieldset>
+<fieldset><legend>每个角落的小画</legend><label>位置 <select id="region"></select></label>
+<div class="toolbar"><button id="choose-image">换一张图片</button><button id="default-image">默认图片</button><button id="hide-image">不放图片</button></div>
+<input id="image-file" type="file" accept="image/png,image/jpeg,image/webp" hidden>
+<p class="hint">单张 PNG / JPEG / WebP，最多 8 MB。选择“宠物设置插画”不会更改桌宠。</p>
+</fieldset>
+</section>
+<aside class="preview-column"><div class="preview" id="preview"><div class="preview-head"><img id="vignette" src="../skins/whale-desk/assets/desk/watercolor-vignette.png" alt=""><span id="sample-motto"></span></div><div id="sample-image-wrap"><img id="sample-image" alt="当前区域的配图示意"></div><h2>探索未至之境</h2><div id="sample-composer"><p id="sample-input">把今天的小想法，慢慢写下来……</p><div class="sample-toolbar"><span>＋</span><span>默认工作区</span><button type="button" disabled>模型 · 示例</button></div></div><p class="sample-caption">配色与素材示意 · 非 DSH 实机画面</p></div>
+<section class="instructions"><h2>带回你的工作台</h2><ol><li>点击“导出配置”，保存 JSON。</li><li>在仓库目录，用 Node.js 22+ 执行：<pre><code>node scripts/configure.mjs --config 配置文件的路径</code></pre></li><li>将生成的 <code>skins/whale-desk</code> 安装到 DSH，重新选择皮肤。</li></ol><p>关闭页面不会自动保存。自选图片会写入导出的配置和应用后的 CSS，请保留在本机。</p><a href="../docs/CUSTOMIZATION.md">完整 DIY 说明</a></section>
+</aside>
+</main><footer>鲸伴 · 水彩小书桌　/　温柔一点，慢慢来。</footer>
+</body></html>

@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-10-21",
+  "repository": "https://github.com/Alphazerolan/diy-journal-skin",
+  "commit": "e68820404ee7183b0f9b15d7dd444b9f48e03071",
+  "upstreamSkinFiles": 485,
+  "baselineMatches": 481,
+  "differences": [
+    {
+      "path": "skins/diy-journal/ARTWORK.json",
+      "upstreamGitBlob": "e4c30d3573cd951bc2f377af125bad655f46e900",
+      "baselineGitBlob": "e76fd08896d1230c8c4f1dcab4531e8a0877f1e4",
+      "matches": false
+    },
+    {
+      "path": "skins/diy-journal/NOTICE",
+      "upstreamGitBlob": "93e551d3d5514c11dd393e35709686c96e599d09",
+      "baselineGitBlob": "032dc7daad965c66eca03deef167cf6bfd57c3ce",
+      "matches": false
+    },
+    {
+      "path": "skins/diy-journal/README.md",
+      "upstreamGitBlob": "f221210ee0a51e331bdf055a7b9606dec3bf2f55",
+      "baselineGitBlob": "7a549766c39b38faf884a17b16a1ce0d91653701",
+      "matches": false
+    },
+    {
+      "path": "skins/diy-journal/README.zh.md",
+      "upstreamGitBlob": "f29bb9d0ffdfa14f16db2211690e6835dd5444c2",
+      "baselineGitBlob": "d12a67a5da6617537c6943b2e741d48d5df4c386",
+      "matches": false
+    }
+  ],
+  "note": "Only provenance/readme files differ from the downloaded baseline; implementation and assets match upstream. Matching files establishes inheritance, not runtime verification."
+}

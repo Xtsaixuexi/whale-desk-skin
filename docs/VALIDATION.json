@@ -1,0 +1,54 @@
+{
+  "runtime": "skin-center 0.4.8",
+  "references": 1128,
+  "missingReferences": 0,
+  "registeredHooks": false,
+  "contrastRatios": {
+    "body": 6.94,
+    "secondary": 4.92,
+    "accent": 4.94,
+    "primaryButton": 5.13,
+    "darkBody": 11.12,
+    "darkSecondary": 7.66,
+    "darkButton": 7.96
+  },
+  "baselineVersion": "1.1.0",
+  "repositoryVersion": "1.1.1",
+  "nativeVisualVerification": {
+    "version": "1.1.0",
+    "passed": [
+      "native loading",
+      "home header and brand",
+      "narrower composer visible",
+      "usage settings surface",
+      "pet sprite visible"
+    ],
+    "pending": [
+      "pet interactions",
+      "all menu states",
+      "complete light/dark regression",
+      "1.1.1 configuration editor in native app"
+    ]
+  },
+  "packageValidation": {
+    "version": "1.1.1",
+    "manifest": true,
+    "catalogLoaded": true,
+    "transforms": {
+      "skin.css": {
+        "warningCount": 0
+      },
+      "patches.css": {
+        "warningCount": 57
+      }
+    },
+    "configurationTests": 10,
+    "configurationTestsPassed": 10,
+    "releaseCheck": "PASS",
+    "localReferences": 1261,
+    "artworkHashes": 16,
+    "embeddedRasterHashes": 14,
+    "files": 524,
+    "warningMeaning": "57 CSS compatibility warnings: substring class selectors depend on host CSS Modules and may change after a DSH rebuild. Not a syntax failure or proof of full runtime coverage."
+  }
+}

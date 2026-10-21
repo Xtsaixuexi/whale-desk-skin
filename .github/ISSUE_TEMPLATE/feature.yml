@@ -1,0 +1,9 @@
+name: 设计建议
+description: 建议一个更温柔、好用的细节
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: 想改善的场景与建议
+    validations:
+      required: true

@@ -1,0 +1,13 @@
+.DS_Store
+Thumbs.db
+node_modules/
+.env
+.env.*
+*.log
+*.zip
+.dsh/
+work/
+backups/
+.whale-desk-backups/
+whale-desk.config.json
+*.personal.json

@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { stripCustomization } from './configure.mjs';
+const skin = fileURLToPath(new URL('../skins/whale-desk/', import.meta.url));
+const marker = '/* WHALE DESK — editable finishing layer */';
+const file = path.join(skin, 'patches.css');
+const text = fs.readFileSync(file, 'utf8');
+if (stripCustomization(text).trim() !== text.trim()) throw Error('请先 --reset 个人 DIY 配置，再同步维护者覆盖层');
+const index = text.indexOf(marker);
+if (index < 0 || text.indexOf(marker, index + marker.length) >= 0) throw Error('覆盖层标记异常');
+fs.writeFileSync(file, text.slice(0, index) + marker + '\n' + fs.readFileSync(path.join(skin, 'DESK-OVERRIDES.css'), 'utf8').trimEnd() + '\n');
+console.log('已同步 DESK-OVERRIDES.css → patches.css');

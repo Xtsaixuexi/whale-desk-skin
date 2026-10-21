@@ -1,0 +1,28 @@
+name: 界面或配置问题
+description: 提交可复现的皮肤问题
+body:
+  - type: input
+    id: versions
+    attributes:
+      label: 版本和系统
+      description: DSH、Skin Center、Whale Desk、系统及显示缩放比例
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 复现步骤与实际表现
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望表现与截图
+      description: 请注明主题和窗口大小，去除个人信息，不上传令牌或私有配置。
+  - type: checkboxes
+    id: custom
+    attributes:
+      label: 使用环境
+      options:
+        - label: 使用了自定义 DIY 配置
+        - label: 使用了其他样式插件
