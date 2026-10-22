@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "composerWidth": 760,
+  "fontSize": 18,
+  "motto": "慢慢来，也很好",
+  "font": "system",
+  "decorations": false,
+  "images": {
+    "main-sidebar": false
+  }
+}

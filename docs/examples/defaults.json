@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "composerWidth": 760,
+  "fontSize": 16,
+  "motto": "让灵感，慢慢发芽",
+  "font": "wenkai",
+  "decorations": true,
+  "light": {
+    "ink": "#704b6d",
+    "muted": "#80667d",
+    "accent": "#935b88",
+    "paper": "#fffaf4",
+    "soft": "#f7eaf2",
+    "line": "#e1c9d7",
+    "wood": "#e8c8a9"
+  },
+  "dark": {
+    "ink": "#f1ddea",
+    "muted": "#d0b6c8",
+    "accent": "#ddb2cf",
+    "paper": "#302733",
+    "soft": "#483447",
+    "line": "#70556b",
+    "wood": "#6c5148"
+  },
+  "images": {}
+}

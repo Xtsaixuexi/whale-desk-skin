@@ -4,6 +4,12 @@
 
 [中文](README.md) · [Installation](INSTALL.md) · [Coverage](docs/PARITY.md) · [Validation](docs/TESTING.md)
 
+## Documentation
+
+The expanded [user manual](docs/USER-GUIDE.md), [installation walkthrough](INSTALL.md), [customization reference](docs/CUSTOMIZATION.md), [troubleshooting guide](docs/FAQ.md) and [documentation index](docs/README.md) are available in Chinese. They cover first use, updates, backups, all 14 artwork slots, parameter limits, pets versus static artwork, and reproducible bug reports.
+
+For DIY, follow four steps: edit in the offline page, export JSON, apply it with the command below, then install the resulting skin in DSH. The page does not automatically save or change a running DSH instance.
+
 ![Whale Desk light home preview](evidence/whale-desk-light.png)
 
 *Static documentation fixture rendered with the shipped CSS and fictional data, not a native DSH screenshot.*
@@ -36,10 +42,13 @@ Open `tools/editor.html` locally. Adjust light/dark colors, text size, composer 
 
 ```sh
 node scripts/configure.mjs --config /path/to/whale-desk.config.json
-node scripts/check-release.mjs
 ```
 
 The editor is offline. The command writes only to the repository skin by default and backs up its previous patch and configuration. Read [the customization guide](docs/CUSTOMIZATION.md) for reset and installation details.
+
+Ready-to-import examples: [compact writing](docs/examples/compact-writing.json), [quiet reading](docs/examples/quiet-reading.json), and [full defaults](docs/examples/defaults.json). Importing an example replaces the configuration, with omitted fields returning to defaults; export your current design first.
+
+`check-release.mjs` validates the public default package and intentionally rejects personal DIY CSS. It is not required after applying a personal configuration. Before publishing, save your JSON, reset the skin to defaults, and then run the release checks. The header motto is separate from the main artistic heading, and changing the pet settings illustration does not change the desktop pet.
 
 ## Scope and status
 

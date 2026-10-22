@@ -4,7 +4,20 @@
 
 为 DeepSeek Harness（DSH）设计的奶油暖木、水彩鲸鱼娘主题。保留原来的侧栏、对话区和工作台布局，把手账装订、胶带与撕纸换成温柔的木沿、陶瓷卡片与水彩花饰。
 
-[English](README.en.md) · [安装与更新](INSTALL.md) · [组件与配图](docs/COMPONENTS.md) · [DIY 配置](docs/CUSTOMIZATION.md) · [与原项目对照](docs/PARITY.md) · [测试状态](docs/TESTING.md)
+[English](README.en.md) · [完整使用手册](docs/USER-GUIDE.md) · [安装与更新](INSTALL.md) · [DIY 配置](docs/CUSTOMIZATION.md) · [常见问题](docs/FAQ.md) · [全部文档](docs/README.md)
+
+## 从这里开始
+
+| 你想做什么 | 直接阅读 |
+| --- | --- |
+| 第一次用，想知道安装和使用的全过程 | [新手使用手册](docs/USER-GUIDE.md) |
+| 看看每个页面是什么样 | [100 张完整图册](docs/COMPONENTS.md) |
+| 按步骤安装、升级或恢复旧版本 | [安装与恢复](INSTALL.md) |
+| 调颜色、字体、输入框，替换 14 个位置的图片 | [DIY 参数与实例](docs/CUSTOMIZATION.md) |
+| 装不出来、改了没变化、配置报错 | [常见问题与排查](docs/FAQ.md) |
+| 了解和原项目的差异、哪些仍未测 | [功能对照](docs/PARITY.md) · [测试记录](docs/TESTING.md) |
+
+**第一次 DIY 建议从小改动开始：** 先调整输入框宽度和顶栏题字，导出 JSON 后应用到皮肤。这里的网页编辑、导出配置、应用命令和 DSH 启用是四个步骤，手册都有对应的操作与完成标志。
 
 ![鲸伴 · 日光首页静态预览](evidence/whale-desk-light.png)
 
@@ -86,10 +99,27 @@
 
 ```sh
 node scripts/configure.mjs --config /path/to/whale-desk.config.json
-node scripts/check-release.mjs
 ```
 
-工具只更新本仓库的皮肤，自动备份上一次样式与配置。编辑器不联网、不读取 DSH 会话，也不会上传所选图片。个性化配置和备份默认由 Git 忽略。更多操作见 [DIY 配置说明](docs/CUSTOMIZATION.md)。
+工具默认更新本仓库的皮肤，也可通过 `--skin` 指定已安装副本，并自动备份上一次样式与配置。编辑器不联网、不读取 DSH 会话，也不会上传所选图片。个性化配置和备份默认由 Git 忽略。更多操作见 [DIY 配置说明](docs/CUSTOMIZATION.md)。
+
+不想从空白开始，可以导入 [紧凑书写](docs/examples/compact-writing.json)、[安静阅读](docs/examples/quiet-reading.json) 或 [默认参数](docs/examples/defaults.json)。示例按整套配置应用，未填写项回到默认值；试用前请先导出自己的改稿。
+
+`check-release.mjs` 是公开默认包的发布检查，会拒绝带个人 DIY 段的 CSS；它不属于个人配置成功后必须执行的步骤。准备公开发布时，先保存个人配置，再恢复默认并检查。
+
+## 仓库里每个文件夹有什么
+
+| 路径 | 用途 |
+| --- | --- |
+| `skins/whale-desk` | 安装到 DSH 的皮肤本体，图片、字体与样式都在这里 |
+| `tools` | 在本机浏览器打开的离线配置器 |
+| `scripts` | 配置应用、样式同步、预览生成与发布检查工具 |
+| `docs` | 完整手册、DIY 参数、FAQ、对照说明、组件图册和示例 JSON |
+| `docs/components` / `docs/artwork` | 80 张组件预览 / 14 张独立配图 |
+| `evidence` | 6 张带静态示例标识的完整界面预览 |
+| `tests` / `.github` | 配置验证、自动检查与问题模板 |
+
+只使用皮肤时复制 `skins/whale-desk` 即可；准备 DIY 或查阅最新说明时保留完整仓库。[文档索引](docs/README.md) 按使用阶段整理了所有入口。
 
 ## 兼容性与已知限制
 
