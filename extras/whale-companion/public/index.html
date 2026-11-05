@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#fcf8f3"><meta name="description" content="鲸伴 · 把温柔带在身边。与你一起工作的动态 AI 陪伴小屋。"><title>鲸伴 · 把温柔带在身边</title><link rel="icon" href="/assets/icon.svg" type="image/svg+xml"><link rel="manifest" href="/manifest.webmanifest"><link rel="stylesheet" href="/style.css"><script src="/app.js" type="module"></script></head>
+<body>
+  <div class="app-shell">
+    <header class="topbar"><a class="brand" href="/" aria-label="鲸伴首页"><span class="brand-mark">◡</span><span>鲸伴<small>WHALE, WITH YOU</small></span></a><div class="top-actions"><span id="sync" class="sync"><i></i>尚未连接</span><button id="settings-open" class="icon-button" aria-label="设置与设备">☷</button></div></header>
+    <main>
+      <section class="companion" aria-label="鲸鲸的陪伴空间">
+        <div class="scene-heading"><span class="eyebrow">A LITTLE PLACE FOR US</span><h1>把温柔，<br>带在身边。</h1><p>忙碌有回应，发呆也有陪伴。</p></div>
+        <span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><span class="spark spark-one">✦</span><span class="spark spark-two">✧</span>
+        <div class="buddy-area"><div id="bubble" class="bubble">今天也一起慢慢来吧。</div><button id="pet" class="pet" aria-label="摸摸鲸鲸"><span class="sprite" id="sprite"></span></button><div class="pet-shadow"></div><span class="pet-caption" id="pet-caption">轻轻点一下，和我打个招呼</span></div>
+        <div class="companion-bottom"><div><span class="presence-dot"></span><strong id="pet-name">鲸鲸</strong><span class="role-label">AI 陪伴伙伴</span></div><div class="interaction-row"><button data-action="wave">挥挥手 <span>✧</span></button><button data-action="tea">一起歇会儿 <span>☕</span></button><button id="motion-toggle" aria-pressed="false">轻柔动态</button></div><p id="dsh-status" class="dsh-status">DSH 工作状态尚未连接</p></div>
+      </section>
+      <section class="conversation" aria-label="陪伴对话">
+        <div class="conversation-heading"><div><span class="eyebrow">OUR EVERYDAY</span><h2>今天，想聊些什么？</h2></div><button id="memory-open" class="text-button">共同记忆 <span id="note-count">0</span></button></div>
+        <div id="mode-banner" class="mode-banner">本地体验版 · 配对后即可体验同步</div>
+        <div id="messages" class="messages" role="log" aria-label="聊天记录" aria-live="polite"></div>
+        <div id="outbox-status" class="outbox-status" role="status"></div>
+        <div class="suggestions"><button data-prompt="今天有点累，陪我聊一会儿吧。">今天有点累</button><button data-prompt="我刚完成了一件小事，想和你分享。">分享一件小事</button><button data-prompt="陪我整理一下今天的计划吧。">陪我慢慢开始</button></div>
+        <form id="chat-form" class="composer"><label class="sr-only" for="message-input">想对鲸鲸说的话</label><textarea id="message-input" maxlength="4000" rows="2" placeholder="把今天的一点点心事，放在这里…"></textarea><div class="composer-footer"><span>Enter 发送 · Shift + Enter 换行</span><button id="send" type="submit" aria-label="发送消息">发送 <span>↗</span></button></div></form>
+        <footer class="chat-footer"><span>你主动记下的小事，会跟着你去下一台设备。</span><button id="speak" class="text-button">朗读回复</button></footer>
+      </section>
+    </main>
+    <footer class="page-footer"><span>鲸伴 / 一个柔软的小角落</span><span id="last-sync">等待设备配对</span></footer>
+  </div>
+
+  <dialog id="login-dialog"><form id="login-form"><div class="dialog-heading"><span class="eyebrow">WELCOME HOME</span><h2>让这台设备认识你</h2></div><p>首次在电脑打开，使用本地管理员密钥。手机使用主设备生成的临时配对码。</p><label>设备名称<input name="deviceName" autocomplete="off" maxlength="40" value="我的电脑" required></label><label>密钥或配对码<input name="key" type="password" autocomplete="current-password" required></label><p class="help">本地密钥在项目的 .local/admin-key.txt 文件中。云端使用你设置的 ADMIN_KEY。</p><p id="login-error" class="error" role="alert"></p><button class="primary" type="submit">进入我的小屋 ↗</button></form></dialog>
+  <dialog id="memory-dialog"><div class="dialog-heading"><h2>共同记忆</h2><button class="close" data-close="memory-dialog" aria-label="关闭记忆">×</button></div><p>只记下你愿意保存的事情。随时删除，所有设备一起更新。</p><div id="notes" class="notes"></div><form id="note-form"><label for="note-input">想记住的小事</label><textarea id="note-input" maxlength="300" placeholder="例如：我喜欢奶油暖木，周末想去看海。" rows="3" required></textarea><button class="primary">记在这里</button></form></dialog>
+  <dialog id="settings-dialog"><div class="dialog-heading"><h2>我们的小设置</h2><button class="close" data-close="settings-dialog" aria-label="关闭设置">×</button></div><form id="profile-form"><label>她的名字<input name="name" maxlength="20" required></label><label>对你的称呼<input name="callName" maxlength="20" required></label><label>相处方式<select name="tone"><option>温柔陪伴</option><option>轻松俏皮</option><option>安静工作搭子</option></select></label><button class="primary">保存到所有设备</button></form><section id="owner-controls"><hr><h3>带到另一台设备</h3><p>在手机打开相同网址，输入一次性配对码。有效期 5 分钟，配对后可随时撤销。</p><button id="pair-create">生成配对码</button><div id="pair-result" class="secret-box" hidden></div><h3>已连接的设备</h3><div id="devices"></div><details><summary>DSH 桥接与数据</summary><p>状态桥接只传输「思考中 / 工作中 / 完成」等状态，不传文件或工作对话。</p><button id="bridge-create">生成 DSH 状态密钥</button><div id="bridge-result" class="secret-box" hidden></div><a href="/api/export" download="whale-companion-export.json">导出聊天与记忆</a></details></section><hr><button id="logout" class="text-button">退出这台设备</button></dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+</body></html>

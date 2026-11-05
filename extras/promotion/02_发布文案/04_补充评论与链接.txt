@@ -1,0 +1,23 @@
+可选补充评论（需要时再发，不是自动发布）
+
+整理一下获取方式 🐋
+项目：Xtsaixuexi/whale-desk-skin
+需要先有 DeepSeek Harness（DSH），下载完整仓库后，按 INSTALL / 使用手册复制 skins/whale-desk 并启用。默认皮肤不需要 Node.js；想把自己的 DIY 配置应用进去时需要 Node.js 22+。
+桌宠是独立功能，不包含在皮肤包里。当前是预发布版，深色细节还在继续打磨。
+
+项目首页
+https://github.com/Xtsaixuexi/whale-desk-skin
+
+完整使用手册
+https://github.com/Xtsaixuexi/whale-desk-skin/blob/main/docs/USER-GUIDE.md
+
+最新完整仓库 ZIP
+https://github.com/Xtsaixuexi/whale-desk-skin/archive/refs/heads/main.zip
+
+原项目与署名
+https://github.com/Alphazerolan/diy-journal-skin
+
+小红书创作服务平台
+https://creator.xiaohongshu.com/
+
+链接是否能在笔记中点击，以平台实际展示为准；不承诺点击效果、流量或收录。
