@@ -15,6 +15,8 @@ function reference(from, ref) {
 function walk(dir) {
   return fs.readdirSync(dir, { withFileTypes: true }).flatMap(entry => {
     if (['.git', 'node_modules', '.whale-desk-backups'].includes(entry.name)) return [];
+    // Independent private applications are outside the skin release and use server routes.
+    if (dir === root && entry.name === 'extras') return [];
     const file = path.join(dir, entry.name);
     if (entry.isSymbolicLink()) { failures.push('Unexpected symlink: ' + rel(file)); return []; }
     return entry.isDirectory() ? walk(file) : [file];
@@ -80,4 +82,4 @@ for (const item of previewFiles) {
 }
 const largest = files.map(file => ({ path: rel(file), bytes: fs.statSync(file).size })).sort((a, b) => b.bytes - a.bytes)[0];
 if (failures.length) { console.error(failures.join('\n')); process.exitCode = 1; }
-else console.log(JSON.stringify({ status: 'PASS', version: manifest.version, files: files.length, localReferences: references, artworkHashes: artHashes, embeddedRasterHashes: 14, previewHashes: previewFiles.length, componentCategories: categories.size, largestFile: largest, runtimeRegression: 'limited native smoke checks and 36 isolated browser cases per pipeline; see docs/TESTING.md' }, null, 2));
+else console.log(JSON.stringify({ status: 'PASS', scope: 'skin release, tools and docs; excludes independent extras applications', version: manifest.version, files: files.length, localReferences: references, artworkHashes: artHashes, embeddedRasterHashes: 14, previewHashes: previewFiles.length, componentCategories: categories.size, largestFile: largest, runtimeRegression: 'limited native smoke checks and 36 isolated browser cases per pipeline; see docs/TESTING.md' }, null, 2));
