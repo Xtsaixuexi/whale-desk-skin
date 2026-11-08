@@ -32,8 +32,12 @@ record, not a claim that every DSH workflow or host version has passed.
   captures use the original skin ID and the shipped CSS, not a renamed copy.
 - Native reasoning-level selector: High -> Low -> High updated the button label
   and the reopened menu checkmark; the original High setting was restored. No
-  new prompt was sent. Attempts to resize via the window border left the capture
-  at 1282 x 822, so native narrow-window behavior is not counted as verified.
+  new prompt was sent. A later system-menu resize reached 954 x 822. Automatic
+  sidebar collapse, manual reopen and model-menu open/Escape-close worked; code
+  and the composer reflowed. The compact model label truncated, with its full
+  name readable in the menu. The pet again approached send after sidebar reopen;
+  moving it to the upper-right exposed the controls. The window was maximized
+  afterward. Narrow-window sending, smaller widths and every DPI remain untested.
 - The earlier workspace reset did not recur after restart; its root cause is
   not established. The account detail-page error was not separately rechecked.
   A follow-up 180-line Python response with a table completed (13 seconds shown);

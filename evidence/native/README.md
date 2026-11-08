@@ -1,7 +1,7 @@
 # Native screenshot evidence
 
 Captured 2026-11-08 from Windows DSH 0.2.1-rc.2, Skin Center 0.4.8 at
-1282 x 822. Account and conversation sidebar was collapsed before capture;
+1282 x 822 unless noted below. Account and conversation sidebar was collapsed before capture;
 images are unretouched window captures. The pet is provided by the separately
 installed pet plugin and is not bundled in the skin.
 
@@ -57,3 +57,11 @@ cause is unestablished.
 
 The static-light/static-dark files are separately labeled fictional browser
 fixtures showing the expanded layout; they are not native DSH screenshots.
+
+Follow-up narrow-chat-dark.jpg was captured at 954 x 822 after a system-menu
+resize. It shows the automatically collapsed sidebar and reflowed code/composer.
+Manual sidebar reopen and model-menu open/Escape-close were then exercised,
+but those account-visible states were not saved for publication. The pet was
+subsequently moved to the upper-right because it approached send with the sidebar
+expanded. The session ended maximized. This does not verify narrower widths,
+every DPI, or sending from the narrow layout.
