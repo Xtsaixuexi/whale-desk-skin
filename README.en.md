@@ -4,6 +4,16 @@
 
 [中文](README.md) · [Installation](INSTALL.md) · [Coverage](docs/PARITY.md) · [Validation](docs/TESTING.md)
 
+## Current release and native captures
+
+Updated 2026-11-08; skin version **1.1.2**. [Market PR #106](https://github.com/zhu1090093659/dsh-skins/pull/106) is open for review: submission-policy checks passed, CI requires maintainer approval, and the skin is not yet listed. This source repository is private; [the submitted skin files](https://github.com/Xtsaixuexi/dsh-skins/tree/feat/whale-desk/skins/whale-desk) are public.
+
+| Light after user restart | Dark after original-path restart |
+| --- | --- |
+| ![Native light conversation](evidence/native/light-after-user-restart.jpg) | ![Native dark conversation](evidence/native/chat-dark-after-restart.jpg) |
+
+These are native Windows DSH captures with the account sidebar hidden. The separate pet plugin is not bundled. A light-to-dark rollback recovered after the user restarted DSH; a subsequent light/dark/light round trip persisted, with light still visible after 88 seconds. No runtime code was changed for this recovery; the root cause remains unknown. [More native evidence](docs/NATIVE-PREVIEW.md) and [tested limits](docs/TESTING.md).
+
 ## Documentation
 
 The expanded [user manual](docs/USER-GUIDE.md), [installation walkthrough](INSTALL.md), [customization reference](docs/CUSTOMIZATION.md), [troubleshooting guide](docs/FAQ.md) and [documentation index](docs/README.md) are available in Chinese. They cover first use, updates, backups, all 14 artwork slots, parameter limits, pets versus static artwork, and reproducible bug reports.

@@ -6,6 +6,18 @@
 
 [English](README.en.md) · [完整使用手册](docs/USER-GUIDE.md) · [安装与更新](INSTALL.md) · [DIY 配置](docs/CUSTOMIZATION.md) · [常见问题](docs/FAQ.md) · [全部文档](docs/README.md)
 
+## 当前版本与实机效果
+
+更新于 **2026-11-08**，皮肤 **1.1.2**。这是 DSH 桌面皮肤，不是 DeepSeek 手机 App 主题。
+
+**市场投稿：** [#106 正式审核中](https://github.com/zhu1090093659/dsh-skins/pull/106)。投稿规则检查通过，CI 尚需维护者授权；尚未合并上架。当前状态与版本记录见 [市场投稿记录](docs/MARKET-SUBMISSION.md)。完整项目仓库保持私有；对外查看请使用 [公开投稿文件](https://github.com/Xtsaixuexi/dsh-skins/tree/feat/whale-desk/skins/whale-desk)。
+
+| 浅色 · 用户重启后恢复并复测 | 深色 · 正式目录冷启动后实测 |
+| --- | --- |
+| ![浅色真实对话](evidence/native/light-after-user-restart.jpg) | ![深色真实对话](evidence/native/chat-dark-after-restart.jpg) |
+
+以上为 Windows DSH 的原生窗口截图，隐藏账户侧栏后保存；浮动桌宠属于另装插件。浅色曾出现自动回退，用户重启后恢复；随后浅色→深色→浅色及配置保存复测通过，88 秒观察未回退。未为此修改运行代码，根因仍未确认。[实机操作与更多截图](docs/NATIVE-PREVIEW.md) · [故障排查](docs/FAQ.md)。
+
 ## 从这里开始
 
 | 你想做什么 | 直接阅读 |
@@ -56,6 +68,8 @@
 
 ## 安装
 
+当前完整仓库需具有访问权限；无权限时请查看 [公开皮肤文件与安装说明](https://github.com/Xtsaixuexi/dsh-skins/tree/feat/whale-desk/skins/whale-desk)。
+
 当前仓库版本为 **1.1.2**，包含设置错位、深色菜单和配置切换修复。优先下载下面的当前仓库 ZIP；旧的 v1.1.1 Release 保留原样。[查看验证范围](docs/TESTING.md)。
 
 [下载 v1.1.1 预发布版](https://github.com/Xtsaixuexi/whale-desk-skin/releases/tag/v1.1.1)：仅安装请选择 `whale-desk-1.1.1.zip`；完整仓库包另含 DIY 工具和文档。
@@ -79,7 +93,7 @@
 | 设置配图 | 账号、通用、模型、插件、预设、归档、Web 插件、皮肤、宠物、工坊、使用统计 |
 | 主题与可访问性 | 浅色／深色配色、键盘焦点、窄屏规则；部分组件保留上游装饰 |
 
-以上是**代码与素材覆盖范围**，不代表所有页面、宿主版本及交互已经通过实机测试。1.1.0 已确认加载、顶栏、字标、输入区比例和使用统计页面；1.1.1 增加配置与发布配套，仍需完整实机回归。
+以上是**代码与素材覆盖范围**。1.1.2 已补测正式目录冷启动、真实消息、停止与继续发送、长代码换行/滚动、任务页面及 954 px 窄窗口。11 项工具测试、同一套 42 项浏览器用例在三种 CSS 管线中通过；不能外推为全部宿主功能或跨平台已兼容，详见 [测试记录](docs/TESTING.md)。
 
 ## 和 DIY 手账本是什么关系
 
@@ -118,7 +132,7 @@ node scripts/configure.mjs --config /path/to/whale-desk.config.json
 | `scripts` | 配置应用、样式同步、预览生成与发布检查工具 |
 | `docs` | 完整手册、DIY 参数、FAQ、对照说明、组件图册和示例 JSON |
 | `docs/components` / `docs/artwork` | 80 张组件预览 / 14 张独立配图 |
-| `evidence` | 6 张带静态示例标识的完整界面预览 |
+| `evidence` | 静态界面预览、原生操作截图与验证报告，类型分别标注 |
 | `tests` / `.github` | 配置验证、自动检查与问题模板 |
 
 只使用皮肤时复制 `skins/whale-desk` 即可；准备 DIY 或查阅最新说明时保留完整仓库。[文档索引](docs/README.md) 按使用阶段整理了所有入口。
@@ -127,9 +141,9 @@ node scripts/configure.mjs --config /path/to/whale-desk.config.json
 
 - 格式：DSH Skin v2；已观察环境：Windows、DSH `0.2.1-rc.2`、Skin Center `0.4.8`。
 - 部分选择器依赖 DSH 当前组件类名，应用更新后可能需要调整。
-- 深色样式与图片遮罩已提供，完整深色实机回归尚未完成。
+- 浅深色关键界面已实测，完整跨平台回归尚未完成；主题回退的重启恢复记录不等于根因修复。
 - 远程访问和权限面板只适配外观，不增加权限、不启动服务。
-- 桌宠显示已观察到，拖动、菜单及动作切换尚未完成测试。
+- 桌宠显示、点击反馈、拖动和悬浮面板已观察；透明区域可能挡住按钮，缩放或重启后需检查位置。完整动作与 Live2D 未验收。
 
 ## 来源与许可
 

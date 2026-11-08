@@ -21,6 +21,16 @@ this does not guarantee that the existing desktop window drops stale CSS.
 Includes CSS, fonts and artwork only. No executable hooks. Pets are managed by
 the separate DSH pet plugin; this package does not bundle pet animations.
 
+## Native captures and market status
+
+[Submission #106](https://github.com/zhu1090093659/dsh-skins/pull/106) is awaiting maintainer CI approval and review; it has not been merged or listed. Status checked 2026-11-08.
+
+| Native light | Native dark |
+| --- | --- |
+| ![Light after restart](https://raw.githubusercontent.com/Xtsaixuexi/dsh-skins/a6f98e166712511d47b2213359a227ccf59722a3/evidence/whale-desk/light-after-user-restart.jpg) | ![Dark after restart](https://raw.githubusercontent.com/Xtsaixuexi/dsh-skins/721e478d330eca734a7b560d3d57134be395129d/evidence/whale-desk/chat-dark-after-restart.jpg) |
+
+These Windows DSH captures use the original skin ID, with account sidebar hidden. They are separate from the static catalog previews below. The pet is a separate plugin. Light selection once reverted to dark; a user restart restored operation and a subsequent light/dark/light round trip persisted for the observed interval. Its root cause remains unknown; see [TESTING.md](TESTING.md).
+
 ## Preview and validation
 
 ![Light static preview](preview/light.jpg)
@@ -45,4 +55,4 @@ Illustrations are for personal, non-commercial use. Character redistribution
 clearance remains independently unverified and is disclosed for market review.
 This is not an official DeepSeek theme or an Android/iOS app theme.
 
-Update caveat: Skin Center 0.4.8 may retain old styles at the same path in an existing desktop window. Reapplying is not guaranteed to clear them. Reopen DSH after running tasks finish; cold restart was not tested in this session.
+Update caveat: Skin Center 0.4.8 may retain old styles at the same path in an existing desktop window. Reapplying is not guaranteed to clear them. Reopen DSH after running tasks finish; original-path cold restart was tested successfully. If theme selection reverts, finish active tasks and restart normally; this is a recovery step, not a proven root-cause fix.
