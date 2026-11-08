@@ -22,6 +22,13 @@ record, not a claim that every DSH workflow or host version has passed.
   input/clear and opening/cancelling the dialog passed without creating tasks. Those
   task captures used a validation copy with only manifest ID/display name changed;
   its CSS/art/fonts matched that stage of the source.
+- Later theme regression: light selection reverted to dark in the running host.
+  The user restarted DSH and reported recovery. A follow-up light -> dark -> light
+  round trip updated both the visible palette and the saved preference; closing
+  settings retained light. No skin CSS or host code was changed for this recovery.
+  The root cause and recurrence risk remain unknown. The pet reappeared near the
+  model control after restart and was moved away; cross-restart placement is not
+  guaranteed.
 - Same-path replacement in an already open desktop window can retain old CSS.
   Following explicit restart approval, the original `whale-desk` directory was
   activated and cold-started successfully. Sidebar collapse/reopen passed there.

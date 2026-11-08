@@ -65,3 +65,10 @@ but those account-visible states were not saved for publication. The pet was
 subsequently moved to the upper-right because it approached send with the sidebar
 expanded. The session ended maximized. This does not verify narrower widths,
 every DPI, or sending from the narrow layout.
+
+light-after-user-restart.jpg records the follow-up after the user restarted DSH
+to recover from light reverting to dark. The original skin ID was active. A
+light -> dark -> light round trip updated the saved preference both ways; light
+remained visible 88 seconds after selection and after closing settings. Account
+sidebar was collapsed for this unretouched capture. The root cause is unknown;
+no runtime code was changed for this recovery.
