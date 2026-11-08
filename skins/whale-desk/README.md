@@ -13,7 +13,8 @@ Skin manifest v2, version 1.1.2. Copy this whole directory to
 `$DSH_HOME/skins/whale-desk` (default: `~/.dsh/skins/whale-desk`), then choose
 Whale Desk in Settings > Skins. No build, Node.js or Python is needed to use it.
 Back up personal edits first. After replacing an active skin's files, switch to
-Official Default and then apply Whale Desk again to load the new styles.
+Official Default and then apply Whale Desk again. See the update caveat below;
+this does not guarantee that the existing desktop window drops stale CSS.
 
 Includes CSS, fonts and artwork only. No executable hooks. Pets are managed by
 the separate DSH pet plugin; this package does not bundle pet animations.
