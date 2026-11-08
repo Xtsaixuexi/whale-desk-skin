@@ -29,9 +29,31 @@ worked, and the model menu opened and closed with Escape. The pet was temporaril
 moved left to expose the model control, then restored. A floating desktop assistant
 overlay at the right edge is external to DSH and was left unretouched.
 
-These checks do not establish every account endpoint, sustained token streaming,
-stop/retry, all models, long code/file delivery, background tasks, or first install
-on a clean machine. The earlier workspace reset's root cause is unestablished.
+Three follow-up captures use that same original skin and final CSS:
+
+- generation-stopped-dark.jpg: a long numbered response was stopped explicitly;
+  the UI shows the stopped state and a partial last line.
+- code-scroll-dark.jpg: a new message after stopping completed successfully;
+  wrapping is off and the long code line has been scrolled horizontally.
+- after-stop-code-wrap-dark.jpg: wrapping is on again and the code folds within
+  the card. The successful reply after stopping is visible.
+
+Before these captures, a table and 180-line Python response completed with
+13 seconds shown; generation-in-progress code growth, scrolling and Ctrl+Home
+were observed. An initial stop attempt happened after that response had finished,
+so it is not counted as the stop test. The later numbered response supplied the
+explicit stopped state. Four prompts requested no tools or file access, and the
+test directory remained empty. A new message is not a retry of the previous turn.
+
+The old pet position intercepted the send button through its transparent hit
+area. It was dragged to the right margin, where the same button sent successfully;
+that working position was retained and checked with both sidebar states. The last
+two captures show it there. This is a placement workaround, not a pet-engine fix.
+
+These checks do not establish every account endpoint, longer sustained streams,
+network reconnect, retrying a prior turn, all models, file delivery, background
+tasks, or first install on a clean machine. The earlier workspace reset's root
+cause is unestablished.
 
 The static-light/static-dark files are separately labeled fictional browser
 fixtures showing the expanded layout; they are not native DSH screenshots.

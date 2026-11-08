@@ -32,8 +32,15 @@ record, not a claim that every DSH workflow or host version has passed.
   captures use the original skin ID and the shipped CSS, not a renamed copy.
 - The earlier workspace reset did not recur after restart; its root cause is
   not established. The account detail-page error was not separately rechecked.
-  One short response does not verify sustained token streaming, stop/retry,
-  every model, long code/file delivery, background tasks or a clean first install.
+  A follow-up 180-line Python response with a table completed (13 seconds shown);
+  generation-in-progress rendering, scrolling and Ctrl+Home were observed. Another
+  response was explicitly stopped, then a new message completed successfully.
+  A very long single code line switched between wrapping and horizontal scrolling.
+  All four prompts prohibited tools/file access; the isolated folder stayed empty.
+  The pet's transparent hit area intercepted the send button at its old position;
+  moving it to the right margin restored click delivery. That position was retained.
+  Longer streams, network reconnect, retrying a prior turn, every model, file
+  delivery, background tasks and clean first install remain unverified.
   Pet hover panel, click feedback and drag were observed, but full actions/Live2D,
   keyboard-only operation, mobile and macOS/Linux remain unverified.
   The skin does not implement those host features.
@@ -47,8 +54,10 @@ record, not a claim that every DSH workflow or host version has passed.
 
 中文：用户授权重启后，正式 `whale-desk` 路径冷启动、侧栏折叠展开、空工作区
 的一次真实消息往返和模型菜单开关通过。对话背景/顶部的暗色纹理问题已修复并
-再次冷启动核验；测试会话和工作区保留。热替换即时刷新、长时间流式输出、
-停止重试、手机、全部桌宠动作及干净机器首次安装未完整验收。
+再次冷启动核验；测试会话和工作区保留。后续 180 行代码、表格、滚动、明确停止、
+停止后新消息、代码换行开关与横向滚动通过。桌宠透明区域拦截发送的问题通过
+移动到右侧空白区解决。热替换即时刷新、网络重连、重试上一轮、手机、全部桌宠
+动作及干净机器首次安装未完整验收。
 
 Character redistribution permission remains independently unverified. See
 [NOTICE](NOTICE). Market inclusion requires maintainer/copyright review.
