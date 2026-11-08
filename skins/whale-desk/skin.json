@@ -4,7 +4,7 @@
   "id": "whale-desk",
   "name": "鲸伴 · 水彩小书桌",
   "nameEn": "Whale Desk",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "author": "Xtsaixuexi",
   "license": "See NOTICE; fonts: SIL OFL 1.1",
   "tagline": "一盏暖灯，一张小书桌，陪你探索未至之境。",
@@ -35,8 +35,8 @@
     }
   },
   "preview": {
-    "light": "preview/desk.png",
-    "dark": "preview/desk.png"
+    "light": "preview/light.jpg",
+    "dark": "preview/dark.jpg"
   },
   "attribution": "Custom watercolor desk generated with OpenAI image generation, 2026-10-21. Component adaptation derived from Alphazerolan/diy-journal-skin v1.14.1. Retained original NOTICE, licenses and artwork provenance. Community fan character, not official DeepSeek artwork.",
   "sourceUrl": "https://github.com/Xtsaixuexi/whale-desk-skin"

@@ -22,7 +22,7 @@ await page.route('**/*',async route=>{
   try{await route.fulfill({contentType:mime[path.extname(target)]||'application/octet-stream',body:await fs.readFile(target)});}
   catch{errors.push(url.pathname);await route.fulfill({status:404,body:'Missing preview asset'});}
 });
-const manifest={schema:1,skinVersion:'1.1.1',kind:'static-css-fixtures',notice:'Fictional fixture data, rendered using the shipped skin CSS and documentation layout. Not native DSH screenshots or runtime test evidence.',components:[],screens:[],artwork:[]};
+const manifest={schema:1,skinVersion:'1.1.2',kind:'static-css-fixtures',notice:'Fictional fixture data, rendered using the shipped skin CSS and documentation layout. Not native DSH screenshots or runtime test evidence.',components:[],screens:[],artwork:[]};
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 async function record(file,extra){const b=await fs.readFile(path.join(root,file));return {...extra,file,sha256:sha(b),width:b.readUInt32BE(16),height:b.readUInt32BE(20)};}
 async function render(file,content,title,theme,full=false){
@@ -34,6 +34,7 @@ async function render(file,content,title,theme,full=false){
   if(bad.length)throw new Error('Broken image: '+bad.join(','));
   await fs.mkdir(path.dirname(path.join(root,file)),{recursive:true});
   await page.screenshot({path:path.join(root,file),fullPage:true,animations:'disabled'});
+  if(full && title==='首页') await page.screenshot({path:path.join(root,`skins/whale-desk/preview/${theme}.jpg`),type:'jpeg',quality:90,fullPage:true,animations:'disabled'});
   console.log(file);
   return record(file,{theme,title,kind:'static-css-fixture'});
 }

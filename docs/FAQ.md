@@ -8,7 +8,7 @@
 
 ### 下载后怎么还是只有一张背景图？
 
-皮肤列表的 `preview/desk.png` 本来就是一张背景预览，并不等于仓库图册。完整展示在 [COMPONENTS.md](COMPONENTS.md)、`docs/components`、`docs/artwork` 和 `evidence` 中。旧的 v1.1.1 Release 仓库 ZIP 保留首次发布内容；要拿到后来增加的 100 张图片和新手册，请下载 [当前完整仓库](https://github.com/Xtsaixuexi/whale-desk-skin/archive/refs/heads/main.zip)。
+1.1.2 的皮肤列表使用 `preview/light.jpg` 和 `preview/dark.jpg`；旧版 `preview/desk.png` 只是背景原图。完整展示在 [COMPONENTS.md](COMPONENTS.md)、`docs/components`、`docs/artwork` 和 `evidence` 中。旧的 v1.1.1 Release 仓库 ZIP 保留首次发布内容；要拿到后来增加的 100 张图片和新手册，请下载 [当前完整仓库](https://github.com/Xtsaixuexi/whale-desk-skin/archive/refs/heads/main.zip)。
 
 ### GitHub 上点击 HTML 为什么只看到代码？
 
@@ -80,7 +80,7 @@ GitHub 文件页面主要展示源代码。下载并完整解压仓库后，在�
 
 ### 深色下有些字不清楚
 
-目前静态示例已记录账户卡、展开触发通知、问答面板等处的对比度问题。可先切换宿主浅色主题，避免将调高某一个颜色当作完整修复。问题范围与实机状态见 [TESTING.md](TESTING.md)。本次说明书更新不包含这些样式修复。
+1.1.2 已修复账户卡、账户菜单、展开触发通知、问答面板及任务、插件卡上的浅色纹理。更新后先恢复默认再应用皮肤。测试覆盖与剩余限制见 [TESTING.md](TESTING.md)。
 
 ### 任务看板、自动化或远程访问入口不在
 

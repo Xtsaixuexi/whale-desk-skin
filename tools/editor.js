@@ -1,6 +1,14 @@
 'use strict';
 const core = globalThis.WhaleDeskConfig;
 let config = core.normalize({}), theme = 'light', selectedRegion = 'home';
+let loadGeneration = 0;
+async function validateImages(value) {
+  for (const source of Object.values(value.images)) {
+    if (!source) continue;
+    const image = new Image(); image.src = source;
+    try { await image.decode(); } catch { throw Error('图片无法解码，请使用完整的 PNG、JPEG 或 WebP'); }
+  }
+}
 const get = id => document.getElementById(id);
 const colorLabels = { ink: '正文', muted: '次要文字', accent: '紫粉强调', paper: '奶油底色', soft: '柔和衬色', line: '边线', wood: '木沿' };
 function status(message, error = false) { get('status').textContent = message; get('status').classList.toggle('error', error); }
@@ -8,7 +16,7 @@ for (const [id, label] of Object.entries(core.regionNames)) { const option = doc
 for (const [key, label] of Object.entries(colorLabels)) {
   const row = document.createElement('label'), input = document.createElement('input');
   input.type = 'color'; input.id = 'color-' + key; row.append(document.createTextNode(label), input); get('colors').append(row);
-  input.addEventListener('input', () => { config[theme][key] = input.value; renderPreview(); });
+  input.addEventListener('input', () => { loadGeneration++; config[theme][key] = input.value; renderPreview(); });
 }
 function syncControls() {
   for (const id of ['motto', 'composerWidth', 'fontSize', 'font']) get(id).value = config[id];
@@ -33,27 +41,31 @@ function renderPreview() {
   try { core.normalize(config); status('可导出 · 图片与设置只在本页处理。'); }
   catch (error) { status(error.message, true); }
 }
-for (const id of ['motto', 'composerWidth', 'fontSize', 'font', 'decorations']) get(id).addEventListener('input', () => { config[id] = id === 'decorations' ? get(id).checked : ['composerWidth', 'fontSize'].includes(id) ? Number(get(id).value) : get(id).value; renderPreview(); });
+for (const id of ['motto', 'composerWidth', 'fontSize', 'font', 'decorations']) get(id).addEventListener('input', () => { loadGeneration++; config[id] = id === 'decorations' ? get(id).checked : ['composerWidth', 'fontSize'].includes(id) ? Number(get(id).value) : get(id).value; renderPreview(); });
 for (const button of document.querySelectorAll('[data-theme]')) button.addEventListener('click', () => { theme = button.dataset.theme; syncControls(); });
 get('region').addEventListener('change', () => { selectedRegion = get('region').value; renderPreview(); });
-get('default-image').addEventListener('click', () => { delete config.images[selectedRegion]; renderPreview(); });
-get('hide-image').addEventListener('click', () => { config.images[selectedRegion] = false; renderPreview(); });
+get('default-image').addEventListener('click', () => { loadGeneration++; delete config.images[selectedRegion]; renderPreview(); });
+get('hide-image').addEventListener('click', () => { loadGeneration++; config.images[selectedRegion] = false; renderPreview(); });
 get('choose-image').addEventListener('click', () => get('image-file').click());
 get('image-file').addEventListener('change', async () => {
   const file = get('image-file').files[0], region = selectedRegion; if (!file) return;
+  const generation = ++loadGeneration;
   try {
     if (file.size > 8 * 1024 * 1024 || !['image/png', 'image/jpeg', 'image/webp'].includes(file.type)) throw Error('请选择 8 MB 以内的 PNG、JPEG 或 WebP');
     const data = await new Promise((resolve, reject) => { const reader = new FileReader(); reader.onload = () => resolve(reader.result); reader.onerror = () => reject(Error('读取图片失败')); reader.readAsDataURL(file); });
+    await validateImages({ images: { [region]: data } });
+    if (generation !== loadGeneration) return;
     const copy = JSON.parse(JSON.stringify(config)); copy.images[region] = data; config = core.normalize(copy); renderPreview();
-  } catch (error) { status(error.message, true); }
+  } catch (error) { if (generation === loadGeneration) status(error.message, true); }
   get('image-file').value = '';
 });
-get('reset').addEventListener('click', () => { config = core.normalize({}); syncControls(); status('已恢复默认；导出并应用后才会改变皮肤。'); });
+get('reset').addEventListener('click', () => { loadGeneration++; config = core.normalize({}); syncControls(); status('已恢复默认；导出并应用后才会改变皮肤。'); });
 get('import').addEventListener('click', () => get('import-file').click());
 get('import-file').addEventListener('change', async () => {
   const file = get('import-file').files[0]; if (!file) return;
-  try { if (file.size > 64 * 1024 * 1024) throw Error('配置文件超过 64 MB'); config = core.normalize(JSON.parse(await file.text())); syncControls(); status('已导入配置。'); }
-  catch (error) { status('导入失败：' + error.message, true); }
+  const generation = ++loadGeneration;
+  try { if (file.size > 64 * 1024 * 1024) throw Error('配置文件超过 64 MB'); const next = core.normalize(JSON.parse(await file.text())); await validateImages(next); if (generation !== loadGeneration) return; config = next; syncControls(); status('已导入配置。'); }
+  catch (error) { if (generation === loadGeneration) status('导入失败：' + error.message, true); }
   get('import-file').value = '';
 });
 get('export').addEventListener('click', () => {

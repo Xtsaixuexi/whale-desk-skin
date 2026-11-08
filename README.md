@@ -56,6 +56,8 @@
 
 ## 安装
 
+当前仓库版本为 **1.1.2**，包含设置错位、深色菜单和配置切换修复。优先下载下面的当前仓库 ZIP；旧的 v1.1.1 Release 保留原样。[查看验证范围](docs/TESTING.md)。
+
 [下载 v1.1.1 预发布版](https://github.com/Xtsaixuexi/whale-desk-skin/releases/tag/v1.1.1)：仅安装请选择 `whale-desk-1.1.1.zip`；完整仓库包另含 DIY 工具和文档。
 
 **获取最新完整图册：** [下载当前仓库 ZIP](https://github.com/Xtsaixuexi/whale-desk-skin/archive/refs/heads/main.zip)。图册在 v1.1.1 首次发布后补充；该版本 Release 中的旧仓库 ZIP 保留原样，最新图片请下载这里。

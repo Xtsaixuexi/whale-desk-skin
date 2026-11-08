@@ -29,6 +29,15 @@ test('remote URLs, SVG payloads and fake image headers are rejected', () => {
   for (const img of ['https://example.com/a.png', 'data:image/svg+xml;base64,PHN2Zz4=', 'data:image/png;base64,YWJjZA==']) assert.throws(() => normalize({ images: { home: img } }));
   assert.throws(() => normalize({ images: { mystery: tinyPng } }));
 });
+
+test('8 MiB image limit uses decoded bytes including base64 padding', () => {
+  const data = Buffer.alloc(8 * 1024 * 1024 + 1);
+  Buffer.from('89504e470d0a1a0a', 'hex').copy(data);
+  const image = bytes => 'data:image/png;base64,' + bytes.toString('base64');
+  assert.doesNotThrow(() => normalize({ images: { home: image(data.subarray(0, -1)) } }));
+  assert.throws(() => normalize({ images: { home: image(data) } }), /8 MB/);
+  assert.throws(() => normalize({ images: { home: tinyPng.slice(0, -1) } }));
+});
 test('repeated application replaces one block and keeps a recoverable backup', t => {
   const skin = fixture(t), file = path.join(skin, 'patches.css');
   const first = applyConfiguration(skin, { composerWidth: 680 });

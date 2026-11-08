@@ -54,7 +54,7 @@ Ready-to-import examples: [compact writing](docs/examples/compact-writing.json),
 
 Derived from **DIY Journal 1.14.1** by [Alphazerolan](https://github.com/Alphazerolan/diy-journal-skin). The base implementation and assets match upstream commit `e68820404ee7183b0f9b15d7dd444b9f48e03071`; newer attribution documents have been incorporated. Fourteen inherited illustrations are recorded; the active home illustration is replaced, with the other 13 slots retained and reframed.
 
-CSS covers conversations, menus, task panels, settings and both theme palettes. This is source coverage, not a claim that every interaction is tested. Native loading, the header/brand, composer proportions and usage settings were observed in 1.1.0 on Windows / DSH 0.2.1-rc.2 / Skin Center 0.4.8. Full 1.1.1 and dark-mode regression remain pending.
+CSS covers conversations, menus, task panels, settings and both theme palettes. This is source coverage, not a claim that every interaction is tested. Native loading, the header/brand, composer proportions and usage settings were observed in 1.1.0 on Windows / DSH 0.2.1-rc.2 / Skin Center 0.4.8. Version 1.1.2 adds setting-page identity, dark-surface and configuration-race fixes. Native smoke checks and isolated CSS/browser checks are documented in [TESTING.md](docs/TESTING.md); a complete cross-platform certification is not claimed.
 
 Desktop pets are separate DSH packages and are not bundled here or in the upstream skin repository. The upstream visual editor is also a separate project targeting `diy-journal`. Our offline editor does not include its two-photo collage, tape editing or in-app settings entry. Default installation registers no JavaScript hooks; native CSS state fallbacks remain available.
 

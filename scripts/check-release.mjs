@@ -22,7 +22,7 @@ function walk(dir) {
 }
 const files = walk(root);
 const manifestPath = path.join(skin, 'skin.json'), manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
-if (manifest.skinManifestVersion !== 2 || manifest.id !== 'whale-desk' || manifest.version !== '1.1.1') failures.push('Unexpected manifest identity/version');
+if (manifest.skinManifestVersion !== 2 || manifest.id !== 'whale-desk' || manifest.version !== '1.1.2') failures.push('Unexpected manifest identity/version');
 if (manifest.facets || manifest.requires) failures.push('Default package must not register hooks');
 if (manifest.sourceUrl?.includes('Alphazerolan')) failures.push('Upstream is not this project release URL');
 for (const ref of [manifest.contributes.stylesheet, manifest.contributes.patches, ...Object.values(manifest.preview), ...Object.values(manifest.contributes.backgroundMedia).map(x => x.src)]) reference(manifestPath, ref);
@@ -80,4 +80,4 @@ for (const item of previewFiles) {
 }
 const largest = files.map(file => ({ path: rel(file), bytes: fs.statSync(file).size })).sort((a, b) => b.bytes - a.bytes)[0];
 if (failures.length) { console.error(failures.join('\n')); process.exitCode = 1; }
-else console.log(JSON.stringify({ status: 'PASS', version: manifest.version, files: files.length, localReferences: references, artworkHashes: artHashes, embeddedRasterHashes: 14, previewHashes: previewFiles.length, componentCategories: categories.size, largestFile: largest, runtimeRegression: 'pending; see docs/TESTING.md' }, null, 2));
+else console.log(JSON.stringify({ status: 'PASS', version: manifest.version, files: files.length, localReferences: references, artworkHashes: artHashes, embeddedRasterHashes: 14, previewHashes: previewFiles.length, componentCategories: categories.size, largestFile: largest, runtimeRegression: 'limited native smoke checks and 36 isolated browser cases per pipeline; see docs/TESTING.md' }, null, 2));
