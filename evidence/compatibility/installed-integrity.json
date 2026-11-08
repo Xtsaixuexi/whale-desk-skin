@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-08",
+  "version": "1.1.2",
+  "sourceFiles": 502,
+  "marketFiles": 502,
+  "installedFiles": 502,
+  "sourceMarketDifferences": [],
+  "sourceInstalledDifferences": [],
+  "legacyFilesMovedToBackup": [
+    "hooks.mjs",
+    "validation.json"
+  ],
+  "runtimeChanged": false,
+  "note": "Byte comparison proves package identity, not runtime compatibility or marketplace listing."
+}
