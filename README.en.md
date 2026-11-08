@@ -6,7 +6,7 @@
 
 ## Current release and native captures
 
-Updated 2026-11-08; skin version **1.1.2**. [Market PR #106](https://github.com/zhu1090093659/dsh-skins/pull/106) is open for review: submission-policy checks passed, CI requires maintainer approval, and the skin is not yet listed. This source repository is private; [the submitted skin files](https://github.com/Xtsaixuexi/dsh-skins/tree/feat/whale-desk/skins/whale-desk) are public.
+Updated 2026-11-08; skin version **1.1.2**. [Market PR #106](https://github.com/zhu1090093659/dsh-skins/pull/106) is open for review: submission-policy checks passed, CI requires maintainer approval, and the skin is not yet listed. This source repository is public; [the submitted skin files](https://github.com/Xtsaixuexi/dsh-skins/tree/feat/whale-desk/skins/whale-desk) are public.
 
 | Light after user restart | Dark after original-path restart |
 | --- | --- |

@@ -10,7 +10,7 @@
 
 更新于 **2026-11-08**，皮肤 **1.1.2**。这是 DSH 桌面皮肤，不是 DeepSeek 手机 App 主题。
 
-**市场投稿：** [#106 正式审核中](https://github.com/zhu1090093659/dsh-skins/pull/106)。投稿规则检查通过，CI 尚需维护者授权；尚未合并上架。当前状态与版本记录见 [市场投稿记录](docs/MARKET-SUBMISSION.md)。完整项目仓库保持私有；对外查看请使用 [公开投稿文件](https://github.com/Xtsaixuexi/dsh-skins/tree/feat/whale-desk/skins/whale-desk)。
+**市场投稿：** [#106 正式审核中](https://github.com/zhu1090093659/dsh-skins/pull/106)。投稿规则检查通过，CI 尚需维护者授权；尚未合并上架。当前状态与版本记录见 [市场投稿记录](docs/MARKET-SUBMISSION.md)。完整项目仓库已公开，也可查看 [公开投稿文件](https://github.com/Xtsaixuexi/dsh-skins/tree/feat/whale-desk/skins/whale-desk)。
 
 | 浅色 · 用户重启后恢复并复测 | 深色 · 正式目录冷启动后实测 |
 | --- | --- |
@@ -68,7 +68,7 @@
 
 ## 安装
 
-当前完整仓库需具有访问权限；无权限时请查看 [公开皮肤文件与安装说明](https://github.com/Xtsaixuexi/dsh-skins/tree/feat/whale-desk/skins/whale-desk)。
+完整仓库可公开浏览和下载；仅安装皮肤也可查看 [公开皮肤文件与安装说明](https://github.com/Xtsaixuexi/dsh-skins/tree/feat/whale-desk/skins/whale-desk)。
 
 当前仓库版本为 **1.1.2**，包含设置错位、深色菜单和配置切换修复。优先下载下面的当前仓库 ZIP；旧的 v1.1.1 Release 保留原样。[查看验证范围](docs/TESTING.md)。
 
@@ -154,6 +154,6 @@ node scripts/configure.mjs --config /path/to/whale-desk.config.json
 [更新记录](CHANGELOG.md) · [贡献指南](CONTRIBUTING.md) · [发布准备](docs/RELEASING.md)
 
 
-## 私有仓库使用说明
+## 仓库使用说明
 
 [首次安装、内容范围与后续同步](docs/repository-setup.md)。本仓库保存源码和必要资源；本机数据与密钥需单独迁移。

@@ -5,7 +5,7 @@
 - 投稿：[dsh-skins #106](https://github.com/zhu1090093659/dsh-skins/pull/106)，已转为正式审核，投稿规则与图片证据自动检查通过，已自动分配审核人；尚未合并、尚未上架。
 - 公共提交：`331465ccaa9dd7ee4e735597fd68eb47eaf01abb`。
 - [公开皮肤文件](https://github.com/Xtsaixuexi/dsh-skins/tree/feat/whale-desk/skins/whale-desk)：502 个文件，约 104.2 MiB；只含皮肤、许可与验证资料。
-- 主项目仍为私有，已保留远端的 companion 与推广素材；未把 extras 内容投稿到市场。
+- 主项目已于 2026-11-08 按作者要求改为公开，保留 companion 与推广素材；市场投稿仍只包含皮肤，未把 extras 内容投稿到市场。
 - 本地测试：11 项工具测试通过，42 项浏览器回归分别通过原 CSS、0.4.8 转换和 0.4.16 转换；完整范围见 [TESTING.md](TESTING.md)。市场目录 66 个皮肤、类型、构建与生成文件检查通过。
 - 上游完整测试并非全绿；未修改上游源码的 worker 基线补测为 23/24，通过记录证明 Windows rename 失败在没有本皮肤时也存在。GitHub CI 当前显示 `action_required`，尚未取得线上 CI 通过结果，需要维护者处理。
 - 十二张投稿图片均已从公共 raw URL 下载，并与提交文件 SHA256 核对一致。原生浅深色截图在 [native 说明](../evidence/native/README.md)，静态演示与原生截图已分开标识；本轮补充重启后的真实对话、模型菜单、明确停止、代码滚动及换行图。

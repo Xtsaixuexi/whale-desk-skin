@@ -4,7 +4,7 @@
 
 ## 获取当前版本
 
-当前皮肤为 **1.1.2**。本项目完整仓库为私有，下方完整 ZIP 和历史 Release 链接需要仓库访问权限。对外公开的是 [市场投稿分支内的皮肤目录](https://github.com/Xtsaixuexi/dsh-skins/tree/feat/whale-desk/skins/whale-desk)，其中提供独立安装说明、许可和验证记录。市场 [#106](https://github.com/zhu1090093659/dsh-skins/pull/106) 尚未合并，不应按“已上架”寻找安装入口。
+当前皮肤为 **1.1.2**。本项目完整仓库已公开，下方完整 ZIP 和历史 Release 可直接访问。仅需皮肤时可查看 [市场投稿分支内的皮肤目录](https://github.com/Xtsaixuexi/dsh-skins/tree/feat/whale-desk/skins/whale-desk)，其中提供独立安装说明、许可和验证记录。市场 [#106](https://github.com/zhu1090093659/dsh-skins/pull/106) 尚未合并，不应按“已上架”寻找安装入口。
 
 ## 选择下载内容
 
