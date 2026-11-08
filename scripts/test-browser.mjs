@@ -104,6 +104,19 @@ try {
       if(!pseudo) assert.equal(await style(selector,'backgroundColor'),'rgb(48, 39, 51)');
     });
   }
+  for (const theme of ['light','dark']) await test('conversation surface and header stay readable after first message: '+theme,async()=>{
+    await load(fullScene('messages'),theme,true);
+    for(const selector of ['[data-conversation-region="chat"]','.Dc7zOa_header']) {
+      assert.equal(await style(selector,'backgroundImage'),'none','opaque inherited linen must not cover the theme');
+      assert.equal(await style(selector,'backgroundColor'),theme==='dark'?'rgb(48, 39, 51)':'rgb(255, 250, 244)');
+    }
+    assert.equal(await style('[data-conversation-region="chat"]','opacity','::before'),'0.22');
+    const luminance=rgb=>{const c=rgb.match(/[\d.]+/g).slice(0,3).map(Number).map(v=>{v/=255;return v<=0.04045?v/12.92:((v+0.055)/1.055)**2.4;});return c[0]*.2126+c[1]*.7152+c[2]*.0722;};
+    const values=await page.locator('[data-conversation-region="chat"]').evaluate(el=>{const s=getComputedStyle(el);return [s.getPropertyValue('--desk-muted'),s.backgroundColor];});
+    const rgb=await page.evaluate(color=>{const el=document.createElement('span');el.style.color=color;document.body.append(el);const v=getComputedStyle(el).color;el.remove();return v;},values[0]);
+    const a=luminance(rgb),b=luminance(values[1]);
+    assert.ok((Math.max(a,b)+.05)/(Math.min(a,b)+.05)>=4.5,'conversation status text needs readable contrast');
+  });
   for (const theme of ['light','dark']) await test('native task page text and field contrast: '+theme,async()=>{
     await load(`<div class="S0jZwq_page"><div class="S0jZwq_pageContent"><header class="S0jZwq_pageHeading"><h1>自动化任务</h1></header><div class="S0jZwq_searchField"><input placeholder="搜索任务" value="测试输入"></div><div class="S0jZwq_list"><div class="S0jZwq_empty"><h2>还没有自动化任务</h2></div></div><article class="S0jZwq_row"><h2 class="S0jZwq_rowTitle">每日灵感</h2><p class="S0jZwq_rowSummary">暂停</p></article></div></div><div class="_7D6uKa_board"><section class="_7D6uKa_column" data-status="todo"><header class="_7D6uKa_columnHeader"><h2 class="_7D6uKa_columnTitle">待办</h2></header></section></div>`,theme);
     const luminance=rgb=>{const channels=rgb.match(/[\d.]+/g).slice(0,3).map(Number).map(c=>{c/=255;return c<=0.04045?c/12.92:((c+0.055)/1.055)**2.4;});return channels[0]*0.2126+channels[1]*0.7152+channels[2]*0.0722;};

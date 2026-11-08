@@ -6658,7 +6658,8 @@ body ::selection {background:#dcb8d766;color:#624060;}
 html body:is([data-ds-dark-theme],:not([data-ds-dark-theme])) [data-dsh-frame]:has(._2H3hWW_root:not(._2H3hWW_collapsed))::after,
 html body ._2H3hWW_root:not(._2H3hWW_collapsed)::before,
 html body .Dc7zOa_headerBlank::before {content:none!important;display:none!important;}
-html body [data-conversation-region="chat"] {background:var(--desk-paper)!important;}
+/* Match the inherited theme selector so opaque linen cannot cover the dark surface. */
+html body:is([data-ds-dark-theme],:not([data-ds-dark-theme])) [data-conversation-region="chat"] {background:var(--desk-paper)!important;}
 html body:is([data-ds-dark-theme],:not([data-ds-dark-theme])) [data-conversation-region="chat"]::before,
 html body:is([data-ds-dark-theme],:not([data-ds-dark-theme])) [data-conversation-region="chat"]:has(> .Dc7zOa_headerBlank)::before {
  inset:0!important;background:url("assets/desk/home.png") center/100% 100% no-repeat!important;
@@ -6668,7 +6669,7 @@ html body[data-ds-dark-theme] [data-conversation-region="chat"]::before {backgro
 /* Soften wallpaper behind actual messages; keep the welcome illustration fully visible. */
 html body [data-conversation-region="chat"]:has([data-chat-flow-kind])::before {opacity:.22!important;}
 html body .Dc7zOa_headerBlank {min-height:40px!important;background:transparent!important;border:0!important;box-shadow:none!important;}
-html body .Dc7zOa_header {background:var(--desk-paper)!important;border-bottom:1px solid var(--desk-line)!important;}
+html body:is([data-ds-dark-theme],:not([data-ds-dark-theme])) .Dc7zOa_header {background:var(--desk-paper)!important;border-bottom:1px solid var(--desk-line)!important;}
 html body .Dc7zOa_crumbCurrent {background:var(--desk-soft)!important;}
 
 /* A single linen organizer with a light wood edge; no cabinet drawer stack. */

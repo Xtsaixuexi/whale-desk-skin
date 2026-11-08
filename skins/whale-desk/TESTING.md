@@ -4,14 +4,14 @@ Version 1.1.2; checked 2026-11-08 on Windows. This is a limited compatibility
 record, not a claim that every DSH workflow or host version has passed.
 
 - 11 offline configuration/install tests passed.
-- 40 isolated browser cases passed using source CSS, the installed Skin Center
-  0.4.8 transform, and the market 0.4.16 transform. These are the same 40 cases
-  in three pipelines, not 120 different features. Machine reports are in
+- 42 isolated browser cases passed using source CSS, the installed Skin Center
+  0.4.8 transform, and the market 0.4.16 transform. These are the same 42 cases
+  in three pipelines, not 126 different features. Machine reports are in
   [validation](validation/browser-tests.json),
   [0.4.8](validation/browser-tests-0.4.8.json) and
   [0.4.16](validation/browser-tests-0.4.16.json).
 - Coverage: sidebar collapse controls, legacy brand markup, theme changes,
-  native task-page and task-dialog contrast, readable dark cards/menus, 11 reordered settings sections, unknown sections,
+  native conversation/header, task-page and task-dialog contrast, readable dark cards/menus, 11 reordered settings sections, unknown sections,
   responsive decoration hiding, system font reset, reduced motion/forced colors,
   wallpaper replacement, corrupt imports and asynchronous editor races.
 - Native DSH 0.2.1-rc.2 / Skin Center 0.4.8: try-on and exit, apply/default,
@@ -19,18 +19,24 @@ record, not a claim that every DSH workflow or host version has passed.
   pet click feedback and drag were exercised. Fresh-path 1.1.2 CSS restored the
   collapsed sidebar control. A subsequent native pass corrected dark automation
   headings/search/empty states, board columns and the new-task dialog; search
-  input/clear and opening/cancelling the dialog passed without creating tasks. Native evidence uses a validation copy with only
-  its manifest ID/display name changed; CSS/art/fonts are byte-identical.
+  input/clear and opening/cancelling the dialog passed without creating tasks. Those
+  task captures used a validation copy with only manifest ID/display name changed;
+  its CSS/art/fonts matched that stage of the source.
 - Same-path replacement in an already open desktop window can retain old CSS.
-  Restoring Default and reapplying is not always sufficient. Normal reopening
-  after background work completes is recommended, but cold restart was not
-  tested: the quit dialog warns of interrupted work. The same warning also
-  appears when inspection fails, so this is not proof of running tasks. Restart
-  confirmation is pending.
-- Model/send/streaming end-to-end validation was blocked by the host workspace
-  not becoming ready and an account-page error. No paid messages were sent.
-  Full pet actions/Live2D, keyboard-only operation, mobile and macOS/Linux are
-  not verified. The skin does not implement those host features.
+  Following explicit restart approval, the original `whale-desk` directory was
+  activated and cold-started successfully. Sidebar collapse/reopen passed there.
+  A real short-message round trip in a new empty workspace reached generating,
+  completed and the expected reply. The workspace did not reset. A further normal
+  restart preserved that conversation and loaded the corrected dark conversation
+  background/header; model-menu open/Escape-close also passed. Current chat
+  captures use the original skin ID and the shipped CSS, not a renamed copy.
+- The earlier workspace reset did not recur after restart; its root cause is
+  not established. The account detail-page error was not separately rechecked.
+  One short response does not verify sustained token streaming, stop/retry,
+  every model, long code/file delivery, background tasks or a clean first install.
+  Pet hover panel, click feedback and drag were observed, but full actions/Live2D,
+  keyboard-only operation, mobile and macOS/Linux remain unverified.
+  The skin does not implement those host features.
 - Upstream full suite: 821/822 passed. The Windows addon directory-rename
   expectation failed; a focused rerun also had two worker startup/timing
   failures. A subsequent unmodified upstream focused baseline (24 tests) passed
@@ -39,9 +45,10 @@ record, not a claim that every DSH workflow or host version has passed.
   failure predates the skin; its OS/dependency root cause is not established.
   The full upstream baseline suite was not rerun. No upstream assertions changed.
 
-中文：已验证皮肤外观与部分真实操作；未完成账号后端、真实发送、冷启动、
-手机和全部桌宠动作的验收。旧窗口原路径可能保留旧 CSS，已用仅改 ID/名称的
-同文件验证副本确认侧栏修复，不将其当作原地更新已通过。
+中文：用户授权重启后，正式 `whale-desk` 路径冷启动、侧栏折叠展开、空工作区
+的一次真实消息往返和模型菜单开关通过。对话背景/顶部的暗色纹理问题已修复并
+再次冷启动核验；测试会话和工作区保留。热替换即时刷新、长时间流式输出、
+停止重试、手机、全部桌宠动作及干净机器首次安装未完整验收。
 
 Character redistribution permission remains independently unverified. See
 [NOTICE](NOTICE). Market inclusion requires maintainer/copyright review.

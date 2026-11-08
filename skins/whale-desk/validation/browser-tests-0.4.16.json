@@ -60,6 +60,14 @@
       "status": "PASS"
     },
     {
+      "name": "conversation surface and header stay readable after first message: light",
+      "status": "PASS"
+    },
+    {
+      "name": "conversation surface and header stay readable after first message: dark",
+      "status": "PASS"
+    },
+    {
       "name": "native task page text and field contrast: light",
       "status": "PASS"
     },
