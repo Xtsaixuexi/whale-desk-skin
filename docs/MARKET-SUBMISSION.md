@@ -3,7 +3,7 @@
 更新于 2026-11-08。皮肤版本 1.1.2。
 
 - 投稿：[dsh-skins #106](https://github.com/zhu1090093659/dsh-skins/pull/106)，已转为正式审核，投稿规则与图片证据自动检查通过，已自动分配审核人；尚未合并、尚未上架。
-- 公共提交：`d912fd2a09c72ab532c58dde0b8b06ab905369ea`。
+- 公共提交：`0dc0cb3a456325ee61c5ddafb9d52828d95d8ec7`。
 - [公开皮肤文件](https://github.com/Xtsaixuexi/dsh-skins/tree/feat/whale-desk/skins/whale-desk)：502 个文件，约 104.2 MiB；只含皮肤、许可与验证资料。
 - 主项目仍为私有，已保留远端的 companion 与推广素材；未把 extras 内容投稿到市场。
 - 本地测试：11 项工具测试通过，42 项浏览器回归分别通过原 CSS、0.4.8 转换和 0.4.16 转换；完整范围见 [TESTING.md](TESTING.md)。市场目录 66 个皮肤、类型、构建与生成文件检查通过。
