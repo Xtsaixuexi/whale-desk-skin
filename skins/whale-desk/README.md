@@ -2,6 +2,8 @@
 
 [简体中文](README.zh.md)
 
+Created and maintained by **Xtsaixuexi**.
+
 A nonofficial watercolor desk skin for DeepSeek Harness, derived from
 [DIY Journal 1.14.1](https://github.com/Alphazerolan/diy-journal-skin).
 Cream wood, mauve lettering and the community Whale-chan character keep the

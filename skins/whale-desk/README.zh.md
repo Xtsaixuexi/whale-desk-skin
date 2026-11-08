@@ -2,6 +2,8 @@
 
 [English](README.md)
 
+**开发与改造作者：Xtsaixuexi。**
+
 Whale Desk 1.1.2 是 DSH 的非官方水彩小书桌皮肤，基于 Alphazerolan 的
 [DIY Journal 1.14.1](https://github.com/Alphazerolan/diy-journal-skin) 改造。
 奶油暖木、紫粉柔字和鲸鱼娘配图保留原生的侧栏、对话区与工作台布局。

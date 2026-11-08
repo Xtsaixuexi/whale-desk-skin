@@ -29,8 +29,11 @@ record, not a claim that every DSH workflow or host version has passed.
   not verified. The skin does not implement those host features.
 - Upstream full suite: 821/822 passed. The Windows addon directory-rename
   expectation failed; a focused rerun also had two worker startup/timing
-  failures. No clean unmodified baseline rerun was completed, so this is not
-  attributed conclusively to the environment. No upstream assertions changed.
+  failures. A subsequent unmodified upstream focused baseline (24 tests) passed
+  23 and reproduced the same Windows rename assertion with no Whale Desk assets
+  present. See [baseline report](validation/upstream-worker-baseline.json). This
+  failure predates the skin; its OS/dependency root cause is not established.
+  The full upstream baseline suite was not rerun. No upstream assertions changed.
 
 中文：已验证皮肤外观与部分真实操作；未完成账号后端、真实发送、冷启动、
 手机和全部桌宠动作的验收。旧窗口原路径可能保留旧 CSS，已用仅改 ID/名称的

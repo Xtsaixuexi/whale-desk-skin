@@ -1,5 +1,8 @@
 Whale Desk / 鲸伴 · 水彩小书桌 1.1.2
-Custom derivative, 2026-10-21. Based on DIY Journal 1.14.1 by Alphazerolan.
+Whale Desk author and maintainer: Xtsaixuexi.
+Copyright 2026 Xtsaixuexi for the Whale Desk-specific code and design changes.
+The author confirms this is their own derivative project, based on DIY Journal
+1.14.1 by Alphazerolan. Upstream work and third-party rights retain their credits.
 New wallpaper and watercolor vignette: OpenAI image generation, 2026-10-21.
 New cream/wood/mauve palette, vector materials, typography and offline configuration tools.
 Original illustration pixels are retained; their SVG framing and UI colours were adapted.
@@ -29,7 +32,7 @@ Character / 角色：DeepSeek 鲸鱼娘（大肥鱼）/ Whale-chan，蓝发女�
    在鲸鱼娘形象基础上加入 DeepSeek 元素的女仆设计，使用 GPT Image 2 生成。
    The maid redesign incorporating DeepSeek elements, generated with GPT Image 2.
 
-3. 本皮肤制作 / This skin: Alphazerolan
+3. 上游 DIY Journal 皮肤制作 / Upstream DIY Journal skin: Alphazerolan
    https://github.com/Alphazerolan/diy-journal-skin
    基于上述形象参考，使用 ChatGPT 为手账本各区域分别生成 14 张主题插画，
    并完成布局、装饰和皮肤适配；未复制其他皮肤的插画文件。

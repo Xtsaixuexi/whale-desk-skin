@@ -2,17 +2,17 @@
 
 更新于 2026-11-08。皮肤版本 1.1.2。
 
-- 投稿：[dsh-skins #106](https://github.com/zhu1090093659/dsh-skins/pull/106)，目前为打开的草稿，尚未合并、尚未上架。
-- 公共提交：`37fc39da7d99b31a95e8f7d201b135a414cc4906`。
-- [公开皮肤文件](https://github.com/Xtsaixuexi/dsh-skins/tree/feat/whale-desk/skins/whale-desk)：501 个文件，约 104.2 MiB；只含皮肤、许可与验证资料。
+- 投稿：[dsh-skins #106](https://github.com/zhu1090093659/dsh-skins/pull/106)，已转为正式审核，投稿规则与图片证据自动检查通过，已自动分配审核人；尚未合并、尚未上架。
+- 公共提交：`8a63bbbbc51122ee4b1ac160b78f16052e5fcd4d`。
+- [公开皮肤文件](https://github.com/Xtsaixuexi/dsh-skins/tree/feat/whale-desk/skins/whale-desk)：502 个文件，约 104.2 MiB；只含皮肤、许可与验证资料。
 - 主项目仍为私有，已保留远端的 companion 与推广素材；未把 extras 内容投稿到市场。
 - 本地测试：11 项工具测试通过，36 项浏览器回归分别通过原 CSS、0.4.8 转换和 0.4.16 转换；完整范围见 [TESTING.md](TESTING.md)。市场目录 66 个皮肤、类型、构建与生成文件检查通过。
-- 上游完整测试并非全绿，Windows worker 测试失败已原样披露。GitHub CI 当前显示 `action_required`，尚未取得线上 CI 通过结果，需要维护者处理。
+- 上游完整测试并非全绿；未修改上游源码的 worker 基线补测为 23/24，通过记录证明 Windows rename 失败在没有本皮肤时也存在。GitHub CI 当前显示 `action_required`，尚未取得线上 CI 通过结果，需要维护者处理。
 - 四张投稿图片均已从公共 raw URL 下载，和提交文件 SHA256 对照一致。原生浅深色截图在 [native 说明](../evidence/native/README.md)，静态演示与原生截图已分开标识。
 
 ## 尚待完成
 
-1. 用户表示持有角色许可，等待具体公开链接；核验角色二创及再分发范围后补入 NOTICE 与 PR，再转为正式审核。未将 AI 生成记录当成角色授权。
+1. 用户已确认 Xtsaixuexi 为本人，Whale Desk 是自己制作的二创项目，已明确本项目作者与上游作者的区别。按作者要求提交正式审核；第三方角色与素材的既有署名和许可范围保留，由市场维护者审核。
 2. 市场维护者执行 CI、版权与兼容审核并合并，随后核验市场实际目录。
 3. 当前宿主工作区未就绪，真实模型发送/流式输出未验收；运行任务结束后的正常冷启动也未验收。
 
