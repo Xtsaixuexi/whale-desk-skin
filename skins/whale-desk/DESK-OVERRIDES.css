@@ -288,7 +288,13 @@ html body:is([data-ds-dark-theme],:not([data-ds-dark-theme])) :is([data-presente
  background:var(--desk-paper)!important;border:1px solid var(--desk-line)!important;border-image:none!important;border-radius:13px!important;box-shadow:var(--desk-shadow)!important;
 }
 /* Dialog material only. Do not alter permission choices, visibility, click targets or status colours. */
-html body:is([data-ds-dark-theme],:not([data-ds-dark-theme])) :is([role="dialog"],[role="alertdialog"]):not([data-shortcut-modal="settings"]) {
+html body:is([data-ds-dark-theme],:not([data-ds-dark-theme])) :is(dialog,[role="dialog"],[role="alertdialog"],[data-dsh-part="dialog"],._7D6uKa_modal,.mL8Uca_modal,._7rgC5q_dialog):not([data-shortcut-modal="settings"],.fThDlq_panel,._2WTFBq_panel,._confirmation_cjd8z_1):not(:has(> .yoSR5W_previewBody)) {
+ --dsw-alias-bg-base:var(--desk-paper)!important;--dsw-alias-bg-layer-1:var(--desk-paper)!important;
+ --dsw-alias-bg-layer-2:var(--desk-soft)!important;--dsw-alias-bg-overlay:var(--desk-paper)!important;
+ --dsw-alias-label-primary:var(--desk-ink)!important;--dsw-alias-label-secondary:var(--desk-muted)!important;
+ --dsw-alias-label-tertiary:var(--desk-muted)!important;--dsw-alias-label-caption:var(--desk-muted)!important;
+ --dsw-alias-border-l1:var(--desk-line)!important;--dsw-alias-border-l2:var(--desk-line)!important;
+ --dsw-alias-interactive-bg-hover:var(--desk-soft)!important;
  background-color:var(--desk-paper)!important;background-image:none!important;border-color:var(--desk-line)!important;border-image:none!important;border-radius:18px!important;color:var(--desk-ink)!important;
 }
 
@@ -368,6 +374,26 @@ html body[data-ds-dark-theme] ._7D6uKa_card::after {background-image:none!import
 html body[data-ds-dark-theme] [data-turn-trigger] > button > span:first-child {
  color:var(--desk-paper)!important;background-color:var(--desk-accent)!important;
 }
+/* Native task pages keep their own tokens; inherit the desk palette explicitly. */
+html body:is([data-ds-dark-theme],:not([data-ds-dark-theme])) :is(.S0jZwq_page,.S0jZwq_detail,._7D6uKa_board,._7D6uKa_modal,._7D6uKa_detail,.fO69Vq_page,.fO69Vq_installDialog) {
+ --sj-ink:var(--desk-ink);--sj-muted:var(--desk-muted);--sj-paper:var(--desk-paper);--sj-line:var(--desk-line);
+ --dsw-alias-label-primary:var(--desk-ink);--dsw-alias-label-secondary:var(--desk-muted);
+ --dsw-alias-label-tertiary:var(--desk-muted);--dsw-alias-label-caption:var(--desk-muted);
+ --dsw-alias-bg-base:var(--desk-paper);--dsw-alias-bg-layer-1:var(--desk-paper);--dsw-alias-bg-layer-2:var(--desk-soft);
+ color:var(--desk-ink);
+}
+html body:is([data-ds-dark-theme],:not([data-ds-dark-theme])) :is(.S0jZwq_pageHeading h1,.S0jZwq_list>.S0jZwq_empty h2,.S0jZwq_row,.S0jZwq_rowTitle) {color:var(--desk-ink)!important;}
+html body:is([data-ds-dark-theme],:not([data-ds-dark-theme])) :is(.S0jZwq_rowSummary,.S0jZwq_metadata,.S0jZwq_pageHeading h1::after) {color:var(--desk-muted)!important;}
+html body:is([data-ds-dark-theme],:not([data-ds-dark-theme])) .S0jZwq_searchField {background:var(--desk-soft)!important;border-color:var(--desk-line)!important;box-shadow:none!important;}
+html body:is([data-ds-dark-theme],:not([data-ds-dark-theme])) .S0jZwq_searchField input {color:var(--desk-ink)!important;background:transparent!important;}
+html body:is([data-ds-dark-theme],:not([data-ds-dark-theme])) .S0jZwq_searchField input::placeholder {color:var(--desk-muted)!important;opacity:1;}
+html body:is([data-ds-dark-theme],:not([data-ds-dark-theme])) .S0jZwq_filterTab {background:var(--desk-soft);color:var(--desk-ink);border-color:var(--desk-line);}
+html body[data-ds-dark-theme] ._7D6uKa_columnHeader {background:var(--desk-soft)!important;border-color:var(--desk-line)!important;box-shadow:none!important;}
+html body[data-ds-dark-theme] .fO69Vq_detailSection {background:var(--desk-paper)!important;}
+html body[data-ds-dark-theme] .fO69Vq_groupHead {background:var(--desk-soft)!important;border-radius:10px;}
+html body[data-ds-dark-theme] .QSKnSa_card[data-tool="schedule_create"] {background:var(--desk-paper)!important;color:var(--desk-ink)!important;border-color:var(--desk-line)!important;box-shadow:var(--desk-shadow)!important;}
+html body[data-ds-dark-theme] .QSKnSa_title {color:var(--desk-ink)!important;}
+html body[data-ds-dark-theme] :is(.QSKnSa_frequency,.QSKnSa_status,.QSKnSa_fallback) {color:var(--desk-muted)!important;}
 /* End-of-cascade accessibility overrides must survive the finishing layer. */
 @media(forced-colors:active) {
  html body:is([data-ds-dark-theme],:not([data-ds-dark-theme])) [data-conversation-region="chat"]::before,

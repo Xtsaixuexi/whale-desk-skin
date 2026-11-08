@@ -60,6 +60,22 @@
       "status": "PASS"
     },
     {
+      "name": "native task page text and field contrast: light",
+      "status": "PASS"
+    },
+    {
+      "name": "native task page text and field contrast: dark",
+      "status": "PASS"
+    },
+    {
+      "name": "native task creation dialog palette: light",
+      "status": "PASS"
+    },
+    {
+      "name": "native task creation dialog palette: dark",
+      "status": "PASS"
+    },
+    {
       "name": "forced colors hides wallpaper with default and customized background",
       "status": "PASS"
     },

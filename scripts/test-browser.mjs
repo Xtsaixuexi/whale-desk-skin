@@ -104,6 +104,27 @@ try {
       if(!pseudo) assert.equal(await style(selector,'backgroundColor'),'rgb(48, 39, 51)');
     });
   }
+  for (const theme of ['light','dark']) await test('native task page text and field contrast: '+theme,async()=>{
+    await load(`<div class="S0jZwq_page"><div class="S0jZwq_pageContent"><header class="S0jZwq_pageHeading"><h1>自动化任务</h1></header><div class="S0jZwq_searchField"><input placeholder="搜索任务" value="测试输入"></div><div class="S0jZwq_list"><div class="S0jZwq_empty"><h2>还没有自动化任务</h2></div></div><article class="S0jZwq_row"><h2 class="S0jZwq_rowTitle">每日灵感</h2><p class="S0jZwq_rowSummary">暂停</p></article></div></div><div class="_7D6uKa_board"><section class="_7D6uKa_column" data-status="todo"><header class="_7D6uKa_columnHeader"><h2 class="_7D6uKa_columnTitle">待办</h2></header></section></div>`,theme);
+    const luminance=rgb=>{const channels=rgb.match(/[\d.]+/g).slice(0,3).map(Number).map(c=>{c/=255;return c<=0.04045?c/12.92:((c+0.055)/1.055)**2.4;});return channels[0]*0.2126+channels[1]*0.7152+channels[2]*0.0722;};
+    const check=async(textSelector,surface)=>{const a=luminance(await style(textSelector,'color')),b=luminance(await style(surface,'backgroundColor'));assert.ok((Math.max(a,b)+.05)/(Math.min(a,b)+.05)>=4.5,textSelector+' needs readable contrast');};
+    await check('.S0jZwq_pageHeading h1','.S0jZwq_pageContent');
+    await check('.S0jZwq_empty h2','.S0jZwq_empty');
+    await check('.S0jZwq_rowTitle','.S0jZwq_row');
+    await check('.S0jZwq_rowSummary','.S0jZwq_row');
+    await check('.S0jZwq_searchField input','.S0jZwq_searchField');
+    await check('._7D6uKa_columnTitle','._7D6uKa_columnHeader');
+    if(theme==='dark') assert.equal(await style('._7D6uKa_columnHeader','backgroundImage'),'none');
+    await page.locator('.S0jZwq_searchField input').fill('可正常输入');
+    assert.equal(await page.locator('.S0jZwq_searchField input').inputValue(),'可正常输入');
+  });
+  for (const theme of ['light','dark']) await test('native task creation dialog palette: '+theme,async()=>{
+    await load('<div role="dialog" class="_7D6uKa_modal"><h2 class="_7D6uKa_modalTitle">新建任务</h2><label>标题<input class="_7D6uKa_input" placeholder="一句话描述要做什么"></label><footer class="_7D6uKa_modalFooter"><button>取消</button></footer></div>',theme);
+    assert.equal(await style('[role="dialog"]','backgroundColor'),theme==='dark'?'rgb(48, 39, 51)':'rgb(255, 250, 244)');
+    assert.equal(await style('[role="dialog"]','color'),theme==='dark'?'rgb(241, 221, 234)':'rgb(112, 75, 109)');
+    assert.equal((await style('[role="dialog"]','backgroundImage')),'none');
+    assert.equal((await page.locator('[role="dialog"]').evaluate(el=>getComputedStyle(el).getPropertyValue('--dsw-alias-label-secondary'))).trim(),theme==='dark'?'#d0b6c8':'#80667d');
+  });
   await test('forced colors hides wallpaper with default and customized background',async()=>{
     await load(fullScene('home'),'dark',true); await page.emulateMedia({forcedColors:'active'});
     assert.equal(await style('[data-conversation-region="chat"]','display','::before'),'none');
