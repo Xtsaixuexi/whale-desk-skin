@@ -138,3 +138,8 @@ node scripts/configure.mjs --config /path/to/whale-desk.config.json
 随附插画和角色画面仅限个人非商业使用；角色、字体与品牌权利仍归相应权利人。本项目为非官方二创，不代表 DeepSeek 官方授权。角色署名依据上游公开记录保留，角色再分发授权尚未独立核实。详见 [NOTICE](skins/whale-desk/NOTICE)、[素材范围](LICENSE-ARTWORK) 与 [逐图来源](skins/whale-desk/ARTWORK.json)。
 
 [更新记录](CHANGELOG.md) · [贡献指南](CONTRIBUTING.md) · [发布准备](docs/RELEASING.md)
+
+
+## 私有仓库使用说明
+
+[首次安装、内容范围与后续同步](docs/repository-setup.md)。本仓库保存源码和必要资源；本机数据与密钥需单独迁移。

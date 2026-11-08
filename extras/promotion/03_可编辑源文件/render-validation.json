@@ -1,0 +1,70 @@
+{
+  "width": 1440,
+  "height": 1920,
+  "slides": 8,
+  "localAssets": "PASS",
+  "textOutsidePage": [],
+  "rendering": "HTML/CSS with existing images; no inpainting or alteration of source artwork",
+  "publicationStatus": "not-uploaded",
+  "bodyCharactersIncludingTags": 666,
+  "outputImages": [
+    {
+      "file": "01_发布图片/01_封面_温柔小书桌.png",
+      "width": 1440,
+      "height": 1920,
+      "sha256": "90b357f3281b95db7fd54b06361f49b47c1498c3209c7ceb19cb7fcd4dbc61a3",
+      "bytes": 2680421
+    },
+    {
+      "file": "01_发布图片/02_全貌_回到自己的角落.png",
+      "width": 1440,
+      "height": 1920,
+      "sha256": "d5e01c9a9d999bf4f27c3a4828254876227ad14b6efc80cf0df65c27d62a4aab",
+      "bytes": 1913706
+    },
+    {
+      "file": "01_发布图片/03_细节_给灵感留白.png",
+      "width": 1440,
+      "height": 1920,
+      "sha256": "42c54c42a9a2a986c461161ad2044d4743abf6fbd6db272c6466e392cf9aff8d",
+      "bytes": 1059260
+    },
+    {
+      "file": "01_发布图片/04_配色_奶油暖木紫粉.png",
+      "width": 1440,
+      "height": 1920,
+      "sha256": "d3e212d86a19dfcc72b347cabfad2a4a886a16b78f887ca13d690a0cf0d4d952",
+      "bytes": 1443337
+    },
+    {
+      "file": "01_发布图片/05_角落_小画陪伴.png",
+      "width": 1440,
+      "height": 1920,
+      "sha256": "c8e849e57529aaa7e3589a749f25d8ac4771d2cde9d18268b5ea1cb604597422",
+      "bytes": 1708286
+    },
+    {
+      "file": "01_发布图片/06_DIY_改成自己的样子.png",
+      "width": 1440,
+      "height": 1920,
+      "sha256": "335583f703cd4f4936e257a21a71e4665e0d085cd917cc2d0111377c281e3518",
+      "bytes": 1097793
+    },
+    {
+      "file": "01_发布图片/07_安装_把小书桌带回去.png",
+      "width": 1440,
+      "height": 1920,
+      "sha256": "17d062af7857196cfef8192dbde5d5ac98f937a5d95cb4693a5f6c59aa31d5f9",
+      "bytes": 789877
+    },
+    {
+      "file": "01_发布图片/08_收尾_留一份温柔给你.png",
+      "width": 1440,
+      "height": 1920,
+      "sha256": "3999352533bb187dc63fa8a6d1231432f5e7ac4f59153055472e2e1637071573",
+      "bytes": 2243875
+    }
+  ],
+  "contactSheetTextEncoding": "UTF-8 verified",
+  "visualReview": "All 8 pages reviewed using contact sheet; cover inspected at full resolution."
+}

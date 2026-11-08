@@ -1,0 +1,15 @@
+{
+  "name": "@whale-desk/dsh-companion",
+  "version": "0.1.0",
+  "description": "鲸伴：DSH 动态陪伴入口与仅状态同步桥接",
+  "type": "module",
+  "main": "index.mjs",
+  "exports": { ".": "./index.mjs", "./client": "./client.js", "./package.json": "./package.json" },
+  "files": ["index.mjs", "client.js", "cordis.patch.yml", "README.md"],
+  "license": "MIT",
+  "dsh": {
+    "engines": { "dsh": ">=0.2.1-rc.2" },
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": { "inject": ["@deepseek-ai/dsh-client-connection"], "platform": "web" }
+  }
+}
