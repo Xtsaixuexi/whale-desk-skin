@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "skinVersion": "1.1.2",
+  "skinVersion": "1.1.3",
   "kind": "static-css-fixtures",
   "notice": "Fictional fixture data, rendered using the shipped skin CSS and documentation layout. Not native DSH screenshots or runtime test evidence.",
   "components": [
@@ -108,9 +108,9 @@
       "title": "用户消息与助手回复",
       "kind": "static-css-fixture",
       "file": "docs/components/messages-light.png",
-      "sha256": "3323f5e4cb2345e2d16ff25aa569392cc255320cd8038119321eb5395101d608",
+      "sha256": "ce6d313f8b71c7fb0731dd8101d4f67cfba846dc7b47a62eece2a6bdb0fc4684",
       "width": 1200,
-      "height": 937,
+      "height": 1058,
       "id": "messages",
       "group": "对话与阅读"
     },
@@ -427,7 +427,7 @@
       "title": "设置 · 账号与余额",
       "kind": "static-css-fixture",
       "file": "docs/components/settings-account-light.png",
-      "sha256": "39025eb527d2fc9dd1a55bd351357bd8d90641b4baa7ec613784a40f4f48def2",
+      "sha256": "451d680f59042bbd820bb36986818678d78c1a8ec39a102f100ef1c188db7873",
       "width": 1200,
       "height": 1109,
       "id": "settings-account",
@@ -548,9 +548,9 @@
       "title": "用户消息与助手回复",
       "kind": "static-css-fixture",
       "file": "docs/components/messages-dark.png",
-      "sha256": "4707a3498fb8c40568971e4657a3da6fc0412339f655a271b83aac14314df0cf",
+      "sha256": "a8e75deb7f47de7ace85ed247c2663bd0c7a64c160cbffc451abc922431a52be",
       "width": 1200,
-      "height": 937,
+      "height": 1058,
       "id": "messages",
       "group": "对话与阅读"
     },
@@ -900,7 +900,7 @@
       "title": "对话",
       "kind": "static-css-fixture",
       "file": "evidence/whale-desk-messages-light.png",
-      "sha256": "45b6b0b449384d82148264da84aeda263ab60b3127e84148442f87555e3590cf",
+      "sha256": "8a481a64f76988433877e272a1f1731f83a4a116473ea65d8f850fc9b688e401",
       "width": 1600,
       "height": 1080
     },
@@ -918,7 +918,7 @@
       "title": "首页",
       "kind": "static-css-fixture",
       "file": "evidence/whale-desk-dark.png",
-      "sha256": "97d1a73f71b3630cc1ecba2705f56cf63bcb435b0a131464979ea33012ccbacd",
+      "sha256": "688f8a3ea47a74dd733c9cb2d74f6d6d4672880d1309c828eeecfaaed737451e",
       "width": 1600,
       "height": 1080
     },
@@ -927,7 +927,7 @@
       "title": "对话",
       "kind": "static-css-fixture",
       "file": "evidence/whale-desk-messages-dark.png",
-      "sha256": "99eb2daaa2f00c0c0c918ed0d57fbceec866a78b1025b120df2a2008e1d44b45",
+      "sha256": "bb9bbfe0f3e8d98b93f30d0636a7dfa549edc7e8021b1edc2b157083d30e3b24",
       "width": 1600,
       "height": 1080
     },
@@ -936,7 +936,7 @@
       "title": "设置",
       "kind": "static-css-fixture",
       "file": "evidence/whale-desk-settings-dark.png",
-      "sha256": "56e2bc60c723500f67a79a55ffffa5f327ef8d312fa505b2d58c964eadcd7315",
+      "sha256": "ce83c7a6e793a64e6067a8c22e29c1c5fab0fefd5586df7d4da710a8581b680d",
       "width": 1600,
       "height": 1080
     }

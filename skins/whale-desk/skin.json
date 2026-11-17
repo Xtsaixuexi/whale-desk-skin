@@ -4,7 +4,7 @@
   "id": "whale-desk",
   "name": "鲸伴 · 水彩小书桌",
   "nameEn": "Whale Desk",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "author": "Xtsaixuexi",
   "license": "See NOTICE; fonts: SIL OFL 1.1",
   "tagline": "一盏暖灯，一张小书桌，陪你探索未至之境。",
@@ -30,7 +30,7 @@
       "dark": {
         "type": "image",
         "src": "assets/desk/home.png",
-        "scrim": "linear-gradient(#221928bb,#221928cc)"
+        "scrim": "linear-gradient(#22192866,#22192888)"
       }
     }
   },

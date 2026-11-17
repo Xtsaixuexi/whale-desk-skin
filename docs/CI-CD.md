@@ -9,7 +9,7 @@
 | 作业 | 内容 | 失败后 |
 | --- | --- | --- |
 | Files and tools · Ubuntu / Windows | 11 项配置工具测试；引用、素材哈希、预览清单、默认包检查 | 阻止生成候选包 |
-| Chromium regression | 锁定 Playwright 版本，运行 42 项隔离浏览器回归 | 保存 JSON 报告和失败截图，阻止生成候选包 |
+| Chromium regression | 锁定 Playwright 版本，运行 44 项隔离浏览器回归 | 保存 JSON 报告和失败截图，阻止生成候选包 |
 | Verified installation candidate | 从 Git 跟踪文件打包，检查包内引用、CRC 与逐文件字节一致性 | 不上传不完整安装包 |
 
 浏览器测试使用项目自己的虚构数据页面，不操作用户账号、不调用模型。
@@ -25,7 +25,7 @@
 
 Artifacts 保留 14 天，下载需要登录 GitHub。安装 ZIP 解压后得到 `whale-desk` 目录，按[安装说明](../INSTALL.md)放入 DSH 皮肤目录。
 
-候选包保留运行 CSS、素材、字体、预览、许可、来源表和中英文说明；不包含开发用 `DESK-OVERRIDES.css`、测试文档、`validation/`、聊天证据、配置器或独立 companion 应用。
+候选包保留运行 CSS、素材、字体、预览（含最新原生聊天图）、许可、来源表和中英文说明；不包含开发用 `DESK-OVERRIDES.css`、测试文档、`validation/`、历史聊天证据、配置器或独立 companion 应用。
 说明中指向测试文档的链接会改为对应提交的源码链接。包内 CSS 与素材保持原字节。
 
 `package-manifest.json` 记录来源提交、是否存在本地未提交修改、每个文件及 ZIP 的 SHA-256。

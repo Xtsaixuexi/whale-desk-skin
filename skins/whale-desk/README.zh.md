@@ -4,7 +4,7 @@
 
 **开发与改造作者：Xtsaixuexi。**
 
-Whale Desk 1.1.2 是 DSH 的非官方水彩小书桌皮肤，基于 Alphazerolan 的
+Whale Desk 1.1.3 是 DSH 的非官方水彩小书桌皮肤，基于 Alphazerolan 的
 [DIY Journal 1.14.1](https://github.com/Alphazerolan/diy-journal-skin) 改造。
 奶油暖木、紫粉柔字和鲸鱼娘配图保留原生的侧栏、对话区与工作台布局。
 
@@ -21,13 +21,13 @@ Whale Desk 1.1.2 是 DSH 的非官方水彩小书桌皮肤，基于 Alphazerolan
 
 ## 实机效果与投稿状态
 
-截至 2026-11-17，[投稿 #106](https://github.com/zhu1090093659/dsh-skins/pull/106) 已关闭，未合并上架；仍需补齐原角色许可依据与最新干净截图。贡献者已确认 Alphazerolan 授权使用皮肤和配图，具体记录及未核实范围见 NOTICE。
+截至 2026-11-17，[投稿 #106](https://github.com/zhu1090093659/dsh-skins/pull/106) 已关闭，未合并上架；最新干净截图已补充，仍需补齐原角色许可依据。贡献者已确认 Alphazerolan 授权使用皮肤和配图，具体记录及未核实范围见 NOTICE。
 
 | 浅色实机 | 深色实机 |
 | --- | --- |
-| ![重启后的浅色](https://raw.githubusercontent.com/Xtsaixuexi/dsh-skins/a6f98e166712511d47b2213359a227ccf59722a3/evidence/whale-desk/light-after-user-restart.jpg) | ![重启后的深色](https://raw.githubusercontent.com/Xtsaixuexi/dsh-skins/721e478d330eca734a7b560d3d57134be395129d/evidence/whale-desk/chat-dark-after-restart.jpg) |
+| ![浅色](preview/native-chat-light.jpg) | ![深色](preview/native-chat-dark.jpg) |
 
-截图来自正式皮肤 ID，隐藏账户侧栏后保存；下方皮肤列表图片另为静态示例。桌宠属于独立插件。曾出现选择浅色后自动回退，用户重启后恢复，随后浅色→深色→浅色与保存配置复测通过。根因未确认，详细范围见 [TESTING.md](TESTING.md)。
+1.1.3 原生窗口，关闭桌宠并收起账户/历史会话侧栏后直接保存，未修图。完整范围见[测试记录](TESTING.md)。
 
 ## 预览与验证
 
@@ -50,3 +50,13 @@ JSON 应用工具、详细说明书与组件图册。维护者修改 `DESK-OVERR
 插画仅限个人非商业使用；角色再分发授权尚未独立核实，已向市场审核披露。
 
 更新提示：0.4.8 的现有桌面窗口可能仍保留原路径旧样式。恢复默认后重应用不保证清除；请在后台任务结束后正常重开 DSH，再核验新版本。正式目录冷启动已经实测通过。主题选择回退时可在任务结束后正常重启排查；这属于恢复步骤，不代表根因已修复。
+
+## 来源与授权状态 / Source and permission record
+
+| 内容 / Content | 来源 / Source | 状态 / Status |
+| --- | --- | --- |
+| DIY Journal 1.14.1 皮肤与配图 | [Alphazerolan](https://github.com/Alphazerolan/diy-journal-skin) | Xtsaixuexi 于 2026-11-17 确认团队成员已授权使用；可核验的许可记录待补充 / contributor-reported team permission |
+| 原角色及女仆改造 | 上善 / ZipZipPipe，见 [NOTICE](NOTICE) 所列公开署名 | 原角色再分发许可未独立核验 / underlying character clearance outstanding |
+| Whale Desk 适配、新书桌与花饰 | Xtsaixuexi / OpenAI image generation | 项目自身贡献；不替代第三方角色许可 / project contribution does not grant third-party rights |
+
+版权与来源声明由贡献者负责提供、核验与更正，不转移给市场维护者；这不替代缺失的角色许可。Contributor responsibility is described in NOTICE. Do not treat this submission as market-approved.

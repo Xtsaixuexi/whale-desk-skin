@@ -1,5 +1,13 @@
 # Validation / 验证范围
 
+## 1.1.3 复审修复 · 2026-11-17
+
+11 项配置测试通过；44 项隔离浏览器用例分别覆盖源 CSS、Skin Center 0.4.8 和 0.4.16 转换。新增完成提示底色、文字边界、点击展开与时间操作栏底色检查。
+
+本机正常重启后检查浅深色欢迎页、原有聊天与长代码显示，并重拍无桌宠/浮窗的截图。没有重新调用模型，也没有宣称动态桌宠或手机同步通过。原生环境仍是 DSH 0.2.1-rc.2 / Skin Center 0.4.8。市场 PR 保持关闭，待原角色许可证据补齐。
+
+以下是此前版本的历史测试记录；不把旧截图当作 1.1.3 当前证据。
+
 Version 1.1.2; checked 2026-11-08 on Windows. This is a limited compatibility
 record, not a claim that every DSH workflow or host version has passed.
 

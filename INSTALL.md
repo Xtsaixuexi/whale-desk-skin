@@ -4,7 +4,7 @@
 
 ## 获取当前版本
 
-当前皮肤为 **1.1.2**。本项目完整仓库已公开，下方完整 ZIP 和历史 Release 可直接访问。仅需皮肤时可查看 [市场投稿分支内的皮肤目录](https://github.com/Xtsaixuexi/dsh-skins/tree/feat/whale-desk/skins/whale-desk)，其中提供独立安装说明、许可和验证记录。市场 [#106](https://github.com/zhu1090093659/dsh-skins/pull/106) 尚未合并，不应按“已上架”寻找安装入口。
+当前皮肤为 **1.1.3**。本项目完整仓库已公开，下方完整 ZIP 和历史 Release 可直接访问。仅需皮肤时可查看 [市场投稿分支内的皮肤目录](https://github.com/Xtsaixuexi/dsh-skins/tree/feat/whale-desk/skins/whale-desk)，其中提供独立安装说明、许可和验证记录。市场 [#106](https://github.com/zhu1090093659/dsh-skins/pull/106) 尚未合并，不应按“已上架”寻找安装入口。
 
 ## 选择下载内容
 
@@ -115,7 +115,7 @@ node scripts/configure.mjs --reset --skin "$env:USERPROFILE\.dsh\skins\whale-des
 
 ## 兼容性说明
 
-已观察环境为 Windows、DSH `0.2.1-rc.2`、Skin Center `0.4.8`。这是观察记录，不是宣称其他版本不能用，也不是承诺所有功能已测。当前仓库皮肤为 1.1.2；已完成的实机操作、自动化回归与未测范围见 [测试状态](docs/TESTING.md)。
+已观察环境为 Windows、DSH `0.2.1-rc.2`、Skin Center `0.4.8`。这是观察记录，不是宣称其他版本不能用，也不是承诺所有功能已测。当前仓库皮肤为 1.1.3；已完成的实机操作、自动化回归与未测范围见 [测试状态](docs/TESTING.md)。
 
 覆盖正在使用的皮肤后，如页面仍保留旧效果，先在皮肤中心恢复“官方默认”，再应用 Whale Desk。此操作通常会切换外观，但当前 0.4.8 桌面窗口仍可能保留同路径旧 CSS，不能视作升级验证通过。
 

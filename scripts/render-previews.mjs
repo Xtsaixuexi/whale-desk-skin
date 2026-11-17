@@ -22,7 +22,7 @@ await page.route('**/*',async route=>{
   try{await route.fulfill({contentType:mime[path.extname(target)]||'application/octet-stream',body:await fs.readFile(target)});}
   catch{errors.push(url.pathname);await route.fulfill({status:404,body:'Missing preview asset'});}
 });
-const manifest={schema:1,skinVersion:'1.1.2',kind:'static-css-fixtures',notice:'Fictional fixture data, rendered using the shipped skin CSS and documentation layout. Not native DSH screenshots or runtime test evidence.',components:[],screens:[],artwork:[]};
+const manifest={schema:1,skinVersion:'1.1.3',kind:'static-css-fixtures',notice:'Fictional fixture data, rendered using the shipped skin CSS and documentation layout. Not native DSH screenshots or runtime test evidence.',components:[],screens:[],artwork:[]};
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 async function record(file,extra){const b=await fs.readFile(path.join(root,file));return {...extra,file,sha256:sha(b),width:b.readUInt32BE(16),height:b.readUInt32BE(20)};}
 async function render(file,content,title,theme,full=false){

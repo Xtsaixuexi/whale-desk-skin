@@ -1,7 +1,7 @@
 {
   "kind": "isolated-browser-regression",
   "cssPipeline": "0.4.16",
-  "browser": "155.0.8059.80",
+  "browser": "157.0.8103.39",
   "tests": [
     {
       "name": "font switches system -> WenKai without leaving input override",
@@ -65,6 +65,14 @@
     },
     {
       "name": "conversation surface and header stay readable after first message: dark",
+      "status": "PASS"
+    },
+    {
+      "name": "native completion badge is opaque, unobstructed and clickable: light",
+      "status": "PASS"
+    },
+    {
+      "name": "native completion badge is opaque, unobstructed and clickable: dark",
       "status": "PASS"
     },
     {

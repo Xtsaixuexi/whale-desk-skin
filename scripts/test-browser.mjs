@@ -116,12 +116,26 @@ try {
       assert.equal(await style(selector,'backgroundImage'),'none','opaque inherited linen must not cover the theme');
       assert.equal(await style(selector,'backgroundColor'),theme==='dark'?'rgb(48, 39, 51)':'rgb(255, 250, 244)');
     }
-    assert.equal(await style('[data-conversation-region="chat"]','opacity','::before'),'0.22');
+    assert.equal(await style('[data-conversation-region="chat"]','opacity','::before'),theme==='dark'?'0.78':'0.45');
     const luminance=rgb=>{const c=rgb.match(/[\d.]+/g).slice(0,3).map(Number).map(v=>{v/=255;return v<=0.04045?v/12.92:((v+0.055)/1.055)**2.4;});return c[0]*.2126+c[1]*.7152+c[2]*.0722;};
     const values=await page.locator('[data-conversation-region="chat"]').evaluate(el=>{const s=getComputedStyle(el);return [s.getPropertyValue('--desk-muted'),s.backgroundColor];});
     const rgb=await page.evaluate(color=>{const el=document.createElement('span');el.style.color=color;document.body.append(el);const v=getComputedStyle(el).color;el.remove();return v;},values[0]);
     const a=luminance(rgb),b=luminance(values[1]);
     assert.ok((Math.max(a,b)+.05)/(Math.min(a,b)+.05)>=4.5,'conversation status text needs readable contrast');
+  });
+  for (const theme of ['light','dark']) await test('native completion badge is opaque, unobstructed and clickable: '+theme,async()=>{
+    await load(fullScene('messages'),theme,true);
+    const selector='button[data-turn-process]';
+    assert.equal(await style(selector,'backgroundColor'),theme==='dark'?'rgb(48, 39, 51)':'rgb(255, 250, 244)');
+    assert.equal(await style(selector,'opacity'),'1');
+    assert.equal(await style(selector,'display','::after'),'none');
+    assert.equal(await style('.xD_KDq_actions','backgroundColor'),theme==='dark'?'rgb(48, 39, 51)':'rgb(255, 250, 244)');
+    const badge=page.locator(selector).first();
+    const bounds=await badge.boundingBox();
+    const text=await badge.locator('span').boundingBox();
+    assert.ok(text.x>=bounds.x && text.x+text.width<=bounds.x+bounds.width && text.y>=bounds.y && text.y+text.height<=bounds.y+bounds.height,'completion text fits inside its surface');
+    await badge.evaluate(el=>el.addEventListener('click',()=>el.setAttribute('aria-expanded','true')));
+    await badge.click();assert.equal(await badge.getAttribute('aria-expanded'),'true');
   });
   for (const theme of ['light','dark']) await test('native task page text and field contrast: '+theme,async()=>{
     await load(`<div class="S0jZwq_page"><div class="S0jZwq_pageContent"><header class="S0jZwq_pageHeading"><h1>自动化任务</h1></header><div class="S0jZwq_searchField"><input placeholder="搜索任务" value="测试输入"></div><div class="S0jZwq_list"><div class="S0jZwq_empty"><h2>还没有自动化任务</h2></div></div><article class="S0jZwq_row"><h2 class="S0jZwq_rowTitle">每日灵感</h2><p class="S0jZwq_rowSummary">暂停</p></article></div></div><div class="_7D6uKa_board"><section class="_7D6uKa_column" data-status="todo"><header class="_7D6uKa_columnHeader"><h2 class="_7D6uKa_columnTitle">待办</h2></header></section></div>`,theme);

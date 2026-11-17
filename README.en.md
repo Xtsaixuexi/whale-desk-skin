@@ -6,13 +6,13 @@
 
 ## Current release and native captures
 
-Status checked 2026-11-17; skin version **1.1.2**. [Market PR #106](https://github.com/zhu1090093659/dsh-skins/pull/106) is closed, not merged or listed. The maintainer invited reopening after character permission evidence and clean current screenshots are supplied. The contributor confirms permission from Alphazerolan for the skin and illustrations; underlying character redistribution remains unverified. This repository is public. [CI and installation candidates](docs/CI-CD.md).
+Status checked 2026-11-17; skin version **1.1.3**. [Market PR #106](https://github.com/zhu1090093659/dsh-skins/pull/106) is closed, not merged or listed. The maintainer invited reopening after character permission evidence and clean current screenshots are supplied. The contributor confirms permission from Alphazerolan for the skin and illustrations; underlying character redistribution remains unverified. This repository is public. [CI and installation candidates](docs/CI-CD.md).
 
 | Light after user restart | Dark after original-path restart |
 | --- | --- |
-| ![Native light conversation](evidence/native/light-after-user-restart.jpg) | ![Native dark conversation](evidence/native/chat-dark-after-restart.jpg) |
+| ![Native light conversation](evidence/native/review-20261117/chat-light.jpg) | ![Native dark conversation](evidence/native/review-20261117/chat-dark.jpg) |
 
-These are native Windows DSH captures with the account sidebar hidden. The separate pet plugin is not bundled. A light-to-dark rollback recovered after the user restarted DSH; a subsequent light/dark/light round trip persisted, with light still visible after 88 seconds. No runtime code was changed for this recovery; the root cause remains unknown. [More native evidence](docs/NATIVE-PREVIEW.md) and [tested limits](docs/TESTING.md).
+These unedited 1.1.3 native Windows captures were taken with the pet disabled and account/history sidebar collapsed. Dark wallpaper masking is lighter; completion and action rows have opaque surfaces. The historical theme rollback recovered after restart; its root cause remains unknown. [Current captures](docs/NATIVE-PREVIEW.md) and [tested limits](docs/TESTING.md).
 
 ## Documentation
 
@@ -64,7 +64,7 @@ Ready-to-import examples: [compact writing](docs/examples/compact-writing.json),
 
 Derived from **DIY Journal 1.14.1** by [Alphazerolan](https://github.com/Alphazerolan/diy-journal-skin). The base implementation and assets match upstream commit `e68820404ee7183b0f9b15d7dd444b9f48e03071`; newer attribution documents have been incorporated. Fourteen inherited illustrations are recorded; the active home illustration is replaced, with the other 13 slots retained and reframed.
 
-CSS covers conversations, menus, task panels, settings and both theme palettes. This is source coverage, not a claim that every interaction is tested. Native loading, the header/brand, composer proportions and usage settings were observed in 1.1.0 on Windows / DSH 0.2.1-rc.2 / Skin Center 0.4.8. Version 1.1.2 adds setting-page identity, dark-surface and configuration-race fixes. Native smoke checks and isolated CSS/browser checks are documented in [TESTING.md](docs/TESTING.md); a complete cross-platform certification is not claimed.
+CSS covers conversations, menus, task panels, settings and both theme palettes. This is source coverage, not a claim that every interaction is tested. Native loading, the header/brand, composer proportions and usage settings were observed in 1.1.0 on Windows / DSH 0.2.1-rc.2 / Skin Center 0.4.8. Version 1.1.3 adds setting-page identity, dark-surface and configuration-race fixes. Native smoke checks and isolated CSS/browser checks are documented in [TESTING.md](docs/TESTING.md); a complete cross-platform certification is not claimed.
 
 Desktop pets are separate DSH packages and are not bundled here or in the upstream skin repository. The upstream visual editor is also a separate project targeting `diy-journal`. Our offline editor does not include its two-photo collage, tape editing or in-app settings entry. Default installation registers no JavaScript hooks; native CSS state fallbacks remain available.
 
