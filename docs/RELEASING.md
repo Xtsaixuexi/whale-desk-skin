@@ -1,5 +1,7 @@
 # 发布准备
 
+当前自动检查与候选包下载见 [CI/CD 说明](CI-CD.md)。通过检查后会生成安装 ZIP 与校验清单，GitHub Release 和市场重新投稿仍需另行完成。
+
 发布仓库：[Xtsaixuexi/whale-desk-skin](https://github.com/Xtsaixuexi/whale-desk-skin)。首个版本为 `v1.1.1` 预发布。
 
 发布前执行：

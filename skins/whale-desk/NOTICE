@@ -9,6 +9,15 @@ Original illustration pixels are retained; their SVG framing and UI colours were
 The home illustration is replaced by assets/desk/home.png; the upstream home remains as an unused reference asset.
 This package uses CSS and native state selectors. No client hooks or application-binary patches are registered.
 Local pet packages and user/account settings are not included.
+TEAM PERMISSION RECORD / 团队许可记录（2026-11-17）
+Contributor Xtsaixuexi states that Alphazerolan is a team member and has authorized
+use of Alphazerolan's skin and illustrations. This records the contributor's
+statement; no independently verifiable permission document was supplied here.
+This statement does not establish permission from the underlying character designers.
+贡献者 Xtsaixuexi 确认：Alphazerolan 为其团队成员，已授权使用其皮肤和配图。
+此处记录贡献者的说明，尚未附可独立核验的授权记录；不据此扩大到原角色权利。
+角色再分发范围仍待核实；市场审核未通过。
+
 The following upstream attribution is preserved from commit e68820404ee7183b0f9b15d7dd444b9f48e03071.
 
 DIY Journal / DIY 手账本 1.14.1

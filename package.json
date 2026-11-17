@@ -1,0 +1,12 @@
+{
+  "name": "whale-desk-skin-tools",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/configure.test.mjs",
+    "check": "node scripts/check-release.mjs",
+    "test:browser": "node scripts/test-browser.mjs",
+    "package:skin": "python scripts/package-skin.py"
+  },
+  "devDependencies": { "playwright": "1.62.1" }
+}

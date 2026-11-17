@@ -15,6 +15,7 @@ function reference(from, ref) {
 function walk(dir) {
   return fs.readdirSync(dir, { withFileTypes: true }).flatMap(entry => {
     if (['.git', 'node_modules', '.whale-desk-backups'].includes(entry.name)) return [];
+    if (dir === root && ['artifacts', 'dist'].includes(entry.name)) return [];
     // Independent private applications are outside the skin release and use server routes.
     if (dir === root && entry.name === 'extras') return [];
     const file = path.join(dir, entry.name);

@@ -1,4 +1,6 @@
 .DS_Store
+/artifacts/
+/dist/
 Thumbs.db
 node_modules/
 .env

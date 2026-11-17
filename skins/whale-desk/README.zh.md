@@ -21,7 +21,7 @@ Whale Desk 1.1.2 是 DSH 的非官方水彩小书桌皮肤，基于 Alphazerolan
 
 ## 实机效果与投稿状态
 
-截至 2026-11-08，[投稿 #106](https://github.com/zhu1090093659/dsh-skins/pull/106) 等待维护者批准 CI 并审核，尚未合并上架。
+截至 2026-11-17，[投稿 #106](https://github.com/zhu1090093659/dsh-skins/pull/106) 已关闭，未合并上架；仍需补齐原角色许可依据与最新干净截图。贡献者已确认 Alphazerolan 授权使用皮肤和配图，具体记录及未核实范围见 NOTICE。
 
 | 浅色实机 | 深色实机 |
 | --- | --- |
@@ -41,7 +41,7 @@ Whale Desk 1.1.2 是 DSH 的非官方水彩小书桌皮肤，基于 Alphazerolan
 
 ## DIY 与许可
 
-配套源码仓库（目前为私有）提供离线配置器、
+配套源码仓库（已公开）提供离线配置器、
 JSON 应用工具、详细说明书与组件图册。维护者修改 `DESK-OVERRIDES.css`
 后，需要同步到实际加载的 `patches.css`。
 

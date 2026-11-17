@@ -6,7 +6,7 @@
 
 ## Current release and native captures
 
-Updated 2026-11-08; skin version **1.1.2**. [Market PR #106](https://github.com/zhu1090093659/dsh-skins/pull/106) is open for review: submission-policy checks passed, CI requires maintainer approval, and the skin is not yet listed. This source repository is public; [the submitted skin files](https://github.com/Xtsaixuexi/dsh-skins/tree/feat/whale-desk/skins/whale-desk) are public.
+Status checked 2026-11-17; skin version **1.1.2**. [Market PR #106](https://github.com/zhu1090093659/dsh-skins/pull/106) is closed, not merged or listed. The maintainer invited reopening after character permission evidence and clean current screenshots are supplied. The contributor confirms permission from Alphazerolan for the skin and illustrations; underlying character redistribution remains unverified. This repository is public. [CI and installation candidates](docs/CI-CD.md).
 
 | Light after user restart | Dark after original-path restart |
 | --- | --- |

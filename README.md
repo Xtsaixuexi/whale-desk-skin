@@ -10,7 +10,7 @@
 
 更新于 **2026-11-08**，皮肤 **1.1.2**。这是 DSH 桌面皮肤，不是 DeepSeek 手机 App 主题。
 
-**市场投稿：** [#106 正式审核中](https://github.com/zhu1090093659/dsh-skins/pull/106)。投稿规则检查通过，CI 尚需维护者授权；尚未合并上架。当前状态与版本记录见 [市场投稿记录](docs/MARKET-SUBMISSION.md)。完整项目仓库已公开，也可查看 [公开投稿文件](https://github.com/Xtsaixuexi/dsh-skins/tree/feat/whale-desk/skins/whale-desk)。
+**市场投稿：** [#106](https://github.com/zhu1090093659/dsh-skins/pull/106) 已关闭、未合并上架（2026-11-17 核对）；补齐角色许可依据与最新干净截图后可重新打开。Alphazerolan 的皮肤及配图使用许可已由贡献者确认，原角色再分发范围仍待核实。[投稿记录](docs/MARKET-SUBMISSION.md) · [CI/CD 与安装候选包](docs/CI-CD.md)。完整项目仓库已公开。
 
 | 浅色 · 用户重启后恢复并复测 | 深色 · 正式目录冷启动后实测 |
 | --- | --- |

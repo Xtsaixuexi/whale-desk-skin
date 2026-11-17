@@ -7,6 +7,8 @@ import { createRequire } from 'node:module';
 import { scenes, documentHtml, fullScene } from './preview-scenes.mjs';
 import '../tools/config-core.js';
 const root = fileURLToPath(new URL('../', import.meta.url));
+const reportDir = path.resolve(root, process.env.BROWSER_REPORT_DIR || 'evidence/compatibility');
+await fs.mkdir(reportDir, {recursive:true});
 const require = createRequire(process.env.PLAYWRIGHT_MODULE_PATH ? path.join(process.env.PLAYWRIGHT_MODULE_PATH, '_entry.cjs') : import.meta.url);
 const { chromium } = require('playwright');
 const runtime = process.env.SKIN_CENTER_MODULE ? await import(pathToFileURL(process.env.SKIN_CENTER_MODULE)) : null;
@@ -34,7 +36,11 @@ await page.route('**/*', async route => {
 });
 async function test(name, fn) {
   try { await fn(); report.tests.push({ name, status:'PASS' }); console.log('PASS ' + name); }
-  catch (error) { report.tests.push({ name, status:'FAIL', error:error.message }); console.error('FAIL ' + name + ': ' + error.message); }
+  catch (error) {
+    report.tests.push({ name, status:'FAIL', error:error.message });
+    console.error('FAIL ' + name + ': ' + error.message);
+    await page.screenshot({path:path.join(reportDir, 'failure-'+report.tests.length+'.png'),fullPage:true}).catch(()=>{});
+  }
 }
 async function load(content, theme='light', full=false) {
   await page.emulateMedia({ forcedColors:'none', reducedMotion:'no-preference' });
@@ -215,8 +221,7 @@ try {
   await test('no missing assets or uncaught browser errors',async()=>assert.deepEqual(errors,[]));
 } finally {
   report.status=report.tests.every(t=>t.status==='PASS')?'PASS':'FAIL';
-  await fs.mkdir(path.join(root,'evidence/compatibility'),{recursive:true});
-  await fs.writeFile(path.join(root,'evidence/compatibility/browser-tests'+(runtime?'-'+process.env.SKIN_CENTER_VERSION:'')+'.json'),JSON.stringify(report,null,2)+'\n');
+  await fs.writeFile(path.join(reportDir,'browser-tests'+(runtime?'-'+process.env.SKIN_CENTER_VERSION:'')+'.json'),JSON.stringify(report,null,2)+'\n');
   await browser.close();
   if(report.status!=='PASS') process.exitCode=1;
 }

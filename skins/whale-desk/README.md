@@ -23,7 +23,7 @@ the separate DSH pet plugin; this package does not bundle pet animations.
 
 ## Native captures and market status
 
-[Submission #106](https://github.com/zhu1090093659/dsh-skins/pull/106) is awaiting maintainer CI approval and review; it has not been merged or listed. Status checked 2026-11-08.
+[Submission #106](https://github.com/zhu1090093659/dsh-skins/pull/106) is closed, not merged or listed (2026-11-17). Character permission evidence and clean current screenshots are still required. The contributor confirms Alphazerolan authorized use of the skin and illustrations; underlying character clearance remains unverified. See NOTICE.
 
 | Native light | Native dark |
 | --- | --- |
@@ -44,7 +44,7 @@ CSS regression also covers the 0.4.8 and 0.4.16 safety transformations.
 
 ## Customize and credits
 
-The companion source repository (currently private) contains
+The companion source repository (public) contains
 an offline editor, JSON configuration tools, a full manual and a component gallery.
 Maintainers must sync `DESK-OVERRIDES.css` into `patches.css` after editing it.
 
