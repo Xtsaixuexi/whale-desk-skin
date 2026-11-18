@@ -54,5 +54,5 @@ npm run package:skin
 
 截至 2026-11-17，市场 #106 已关闭，维护者要求角色许可依据及最新干净实机截图。
 市场旧 CI 运行 `42482206767` 显示失败，但返回零作业、零检查项，没有代码测试失败日志；不能据此声称测试已经执行。
-作者已确认 Alphazerolan 授权使用其皮肤和配图，见 [NOTICE](../skins/whale-desk/NOTICE)；原角色再分发范围仍待核实。
+作者授权声明与维护责任见 [NOTICE](../skins/whale-desk/NOTICE)，相关核验事项由作者直接与维护者对接。
 完整记录见[投稿状态](MARKET-SUBMISSION.md)。

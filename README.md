@@ -10,7 +10,9 @@
 
 更新于 **2026-11-17**，皮肤 **1.1.3**。这是 DSH 桌面皮肤，不是 DeepSeek 手机 App 主题。
 
-**市场投稿：** [#106](https://github.com/zhu1090093659/dsh-skins/pull/106) 已关闭、未合并上架（2026-11-17 核对）；最新干净截图已补齐，角色许可依据完整后再重新打开。Alphazerolan 的皮肤及配图使用许可已由贡献者确认，原角色再分发范围仍待核实。[投稿记录](docs/MARKET-SUBMISSION.md) · [CI/CD 与安装候选包](docs/CI-CD.md)。完整项目仓库已公开。
+**作者与维护：** 作者 Xtsaixuexi 声明，已取得本项目所用皮肤、配图及角色的相关使用与公开再分发授权；由作者负责项目维护、授权记录管理，并直接与维护者对接核验事项。 [授权与来源声明](skins/whale-desk/NOTICE)。
+
+**市场投稿：** [#106](https://github.com/zhu1090093659/dsh-skins/pull/106)。当前公开版本为 1.1.3；投稿进度与审核结果以 GitHub 页面为准。[投稿记录](docs/MARKET-SUBMISSION.md) · [CI/CD 与安装候选包](docs/CI-CD.md)。
 
 | 浅色 · 用户重启后恢复并复测 | 深色 · 正式目录冷启动后实测 |
 | --- | --- |
@@ -149,7 +151,7 @@ node scripts/configure.mjs --config /path/to/whale-desk.config.json
 
 代码与文档沿用 [MIT 许可](LICENSE)，保留 Alphazerolan 版权声明。字体为 SIL OFL 1.1，详见皮肤内的许可文件。
 
-随附插画和角色画面仅限个人非商业使用；角色、字体与品牌权利仍归相应权利人。本项目为非官方二创，不代表 DeepSeek 官方授权。角色署名依据上游公开记录保留，角色再分发授权尚未独立核实。详见 [NOTICE](skins/whale-desk/NOTICE)、[素材范围](LICENSE-ARTWORK) 与 [逐图来源](skins/whale-desk/ARTWORK.json)。
+随附插画和角色画面仅限个人非商业使用；角色、字体与品牌权利仍归相应权利人。本项目为非官方二创，不代表 DeepSeek 官方授权。角色署名依据上游公开记录保留；本项目授权事项由作者负责，见作者授权声明。详见 [NOTICE](skins/whale-desk/NOTICE)、[素材范围](LICENSE-ARTWORK) 与 [逐图来源](skins/whale-desk/ARTWORK.json)。
 
 [更新记录](CHANGELOG.md) · [贡献指南](CONTRIBUTING.md) · [发布准备](docs/RELEASING.md)
 

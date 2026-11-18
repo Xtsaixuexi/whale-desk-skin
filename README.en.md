@@ -6,7 +6,7 @@
 
 ## Current release and native captures
 
-Status checked 2026-11-17; skin version **1.1.3**. [Market PR #106](https://github.com/zhu1090093659/dsh-skins/pull/106) is closed, not merged or listed. The maintainer invited reopening after character permission evidence and clean current screenshots are supplied. The contributor confirms permission from Alphazerolan for the skin and illustrations; underlying character redistribution remains unverified. This repository is public. [CI and installation candidates](docs/CI-CD.md).
+Current skin version: **1.1.3**. Author Xtsaixuexi states that the permissions required to use and publicly redistribute the skin, illustrations and characters in this project have been obtained. The author maintains the project and permission records and handles verification directly with the market maintainers. [Author declaration and credits](skins/whale-desk/NOTICE). [Market submission #106](https://github.com/zhu1090093659/dsh-skins/pull/106) records the separate review status. This repository is public. [CI and installation candidates](docs/CI-CD.md).
 
 | Light after user restart | Dark after original-path restart |
 | --- | --- |
@@ -70,4 +70,4 @@ Desktop pets are separate DSH packages and are not bundled here or in the upstre
 
 ## Credits and license
 
-Software and documentation: [MIT](LICENSE), preserving upstream attribution. Fonts retain their SIL OFL licenses. Bundled illustrations and character art are for personal, non-commercial use only. Character redistribution clearance remains independently unverified; this is unofficial fan work, not official DeepSeek art. See [NOTICE](skins/whale-desk/NOTICE), [artwork scope](LICENSE-ARTWORK) and [provenance](skins/whale-desk/ARTWORK.json).
+Software and documentation: [MIT](LICENSE), preserving upstream attribution. Fonts retain their SIL OFL licenses. Bundled illustrations and character art are for personal, non-commercial use only. See the author permission statement in NOTICE. This is unofficial fan work, not official DeepSeek art. See [NOTICE](skins/whale-desk/NOTICE), [artwork scope](LICENSE-ARTWORK) and [provenance](skins/whale-desk/ARTWORK.json).

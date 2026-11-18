@@ -21,7 +21,7 @@ Whale Desk 1.1.3 是 DSH 的非官方水彩小书桌皮肤，基于 Alphazerolan
 
 ## 实机效果与投稿状态
 
-截至 2026-11-17，[投稿 #106](https://github.com/zhu1090093659/dsh-skins/pull/106) 已关闭，未合并上架；最新干净截图已补充，仍需补齐原角色许可依据。贡献者已确认 Alphazerolan 授权使用皮肤和配图，具体记录及未核实范围见 NOTICE。
+作者 Xtsaixuexi 声明，已取得本项目所用皮肤、配图及角色的相关使用与公开再分发授权；由作者负责项目维护、授权记录管理，并直接与维护者对接核验事项。 见 [NOTICE](NOTICE)。[投稿 #106](https://github.com/zhu1090093659/dsh-skins/pull/106) 记录市场审核进度。
 
 | 浅色实机 | 深色实机 |
 | --- | --- |
@@ -47,7 +47,7 @@ JSON 应用工具、详细说明书与组件图册。维护者修改 `DESK-OVERR
 
 代码许可见 [LICENSE](LICENSE)，插画范围见 [LICENSE-ARTWORK](LICENSE-ARTWORK)。
 角色、字体及上游署名见 [NOTICE](NOTICE)，逐图来源与哈希见 [ARTWORK.json](ARTWORK.json)。
-插画仅限个人非商业使用；角色再分发授权尚未独立核实，已向市场审核披露。
+插画仅限个人非商业使用；授权事项由作者负责，见 NOTICE 中的作者声明。
 
 更新提示：0.4.8 的现有桌面窗口可能仍保留原路径旧样式。恢复默认后重应用不保证清除；请在后台任务结束后正常重开 DSH，再核验新版本。正式目录冷启动已经实测通过。主题选择回退时可在任务结束后正常重启排查；这属于恢复步骤，不代表根因已修复。
 
@@ -55,8 +55,8 @@ JSON 应用工具、详细说明书与组件图册。维护者修改 `DESK-OVERR
 
 | 内容 / Content | 来源 / Source | 状态 / Status |
 | --- | --- | --- |
-| DIY Journal 1.14.1 皮肤与配图 | [Alphazerolan](https://github.com/Alphazerolan/diy-journal-skin) | Xtsaixuexi 于 2026-11-17 确认团队成员已授权使用；可核验的许可记录待补充 / contributor-reported team permission |
-| 原角色及女仆改造 | 上善 / ZipZipPipe，见 [NOTICE](NOTICE) 所列公开署名 | 原角色再分发许可未独立核验 / underlying character clearance outstanding |
+| DIY Journal 1.14.1 皮肤与配图 | [Alphazerolan](https://github.com/Alphazerolan/diy-journal-skin) | 作者确认团队使用授权 / author-confirmed team permission |
+| 原角色及女仆改造 | 上善 / ZipZipPipe，见 [NOTICE](NOTICE) 所列公开署名 | 作者声明相关使用与再分发授权已取得 / author-declared use and redistribution permission |
 | Whale Desk 适配、新书桌与花饰 | Xtsaixuexi / OpenAI image generation | 项目自身贡献；不替代第三方角色许可 / project contribution does not grant third-party rights |
 
-版权与来源声明由贡献者负责提供、核验与更正，不转移给市场维护者；这不替代缺失的角色许可。Contributor responsibility is described in NOTICE. Do not treat this submission as market-approved.
+本项目由 Xtsaixuexi 持续维护；授权记录、版权与来源事项由作者负责，并与维护者直接对接。This is the author's declaration; market review remains a separate maintainer decision. See NOTICE.

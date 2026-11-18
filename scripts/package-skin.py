@@ -93,7 +93,7 @@ def main():
     report = {'kind': 'installation-candidate-not-market-approval', 'version': manifest['version'],
               'sourceCommit': revision, 'workingTreeDirty': dirty,
               'archive': archive.name, 'archiveSha256': sha(archive.read_bytes()),
-              'characterPermission': 'Alphazerolan permission reported by contributor; original character clearance unverified',
+              'characterPermission': 'Author Xtsaixuexi declares required use and redistribution permissions obtained; see NOTICE for author responsibility and applicable license scope',
               'files': [{'path': k, 'bytes': len(v), 'sha256': sha(v)} for k, v in sorted(entries.items())]}
     metadata = out / 'package-manifest.json'
     metadata.write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')

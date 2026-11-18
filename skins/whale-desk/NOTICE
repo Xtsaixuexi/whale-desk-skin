@@ -9,14 +9,13 @@ Original illustration pixels are retained; their SVG framing and UI colours were
 The home illustration is replaced by assets/desk/home.png; the upstream home remains as an unused reference asset.
 This package uses CSS and native state selectors. No client hooks or application-binary patches are registered.
 Local pet packages and user/account settings are not included.
-TEAM PERMISSION RECORD / 团队许可记录（2026-11-17）
-Contributor Xtsaixuexi states that Alphazerolan is a team member and has authorized
-use of Alphazerolan's skin and illustrations. This records the contributor's
-statement; no independently verifiable permission document was supplied here.
-This statement does not establish permission from the underlying character designers.
-贡献者 Xtsaixuexi 确认：Alphazerolan 为其团队成员，已授权使用其皮肤和配图。
-此处记录贡献者的说明，尚未附可独立核验的授权记录；不据此扩大到原角色权利。
-角色再分发范围仍待核实；市场审核未通过。
+AUTHOR PERMISSION STATEMENT / 作者授权声明（2026-11-18）
+作者 Xtsaixuexi 声明，已取得本项目所用皮肤、配图及角色的相关使用与公开再分发授权；由作者负责项目维护、授权记录管理，并直接与维护者对接核验事项。
+Author Xtsaixuexi states that the permissions required to use and publicly redistribute the skin, illustrations and characters in this project have been obtained. The author maintains the project and permission records and handles verification directly with the market maintainers.
+Alphazerolan 为作者团队成员，作者确认已获准使用其皮肤及配图。
+The author confirms permission from team member Alphazerolan for the skin and illustrations.
+本节记录作者声明，来源署名与各项许可的适用范围照常保留；市场审核由维护者独立进行。
+This section records the author's declaration. Source credits and individual license terms remain applicable; market review is a separate maintainer decision.
 
 The following upstream attribution is preserved from commit e68820404ee7183b0f9b15d7dd444b9f48e03071.
 
@@ -55,10 +54,9 @@ https://github.com/Small-tailqwq/dsh-deep-whale/blob/main/maid-atelier/NOTICE
 https://www.bilibili.com/video/BV16qhJ6qEHG/
 
 本项目为非官方二创，角色设计权利归相应创作者。以上署名依据公开资料整理；
-本项目的角色再分发授权尚未独立核实。ChatGPT 生成不代表 DeepSeek 官方授权。
+本项目授权事项见上方作者声明。ChatGPT 生成不代表 DeepSeek 官方授权。
 This is an unofficial fan work; character-design rights remain with their
-respective creators. Credits follow public attribution records. Permission to
-redistribute this character in this project remains independently unverified.
+respective creators. Credits follow public attribution records. For this project's permission declaration, see the author statement above.
 ChatGPT generation does not imply official DeepSeek authorization.
 
 DECORATIVE ASSETS / 装饰素材
@@ -85,9 +83,8 @@ Project-authored code is MIT licensed. The contributor permits redistribution of
 project-created decorations and generated outputs to the extent of their rights,
 subject to the personal, non-commercial restriction on illustrations and character artwork;
 this does not grant rights belonging to character creators, font authors or brands.
-Third-party rights and the font licenses remain applicable. Character clearance
-is outstanding and is explicitly disclosed to Workshop reviewers.
+Third-party rights and font licenses remain applicable. The author handles project permission matters and maintainer review correspondence.
 
 CONTRIBUTOR RESPONSIBILITY / 贡献者责任
-本项目的版权与来源声明由贡献者 Xtsaixuexi 负责提供、核验与更正；不将素材授权责任转移给皮肤市场维护者。此声明不替代尚缺的原角色再分发许可。
-Contributor Xtsaixuexi is responsible for supplying, verifying and correcting copyright and provenance statements for this submission; these responsibilities are not transferred to the skin-market maintainers. This statement is not a substitute for the outstanding character redistribution permission.
+本项目的版权与来源声明由贡献者 Xtsaixuexi 负责提供、核验与更正；不将素材授权责任转移给皮肤市场维护者。具体使用范围以相关权利人的许可为准。
+Contributor Xtsaixuexi is responsible for supplying, verifying and correcting copyright and provenance statements for this submission; these responsibilities are not transferred to the skin-market maintainers. The applicable scope remains governed by the relevant rights holders' permissions.

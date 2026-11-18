@@ -23,7 +23,7 @@ the separate DSH pet plugin; this package does not bundle pet animations.
 
 ## Native captures and market status
 
-[Submission #106](https://github.com/zhu1090093659/dsh-skins/pull/106) is closed, not merged or listed (2026-11-17). Clean current screenshots are supplied; character permission evidence remains outstanding. The contributor confirms Alphazerolan authorized use of the skin and illustrations; underlying character clearance remains unverified. See NOTICE.
+Author Xtsaixuexi states that the permissions required to use and publicly redistribute the skin, illustrations and characters in this project have been obtained. The author maintains the project and permission records and handles verification directly with the market maintainers. See [NOTICE](NOTICE). [Submission #106](https://github.com/zhu1090093659/dsh-skins/pull/106) records the separate market review status.
 
 | Native light | Native dark |
 | --- | --- |
@@ -51,8 +51,7 @@ Maintainers must sync `DESK-OVERRIDES.css` into `patches.css` after editing it.
 Project code: [LICENSE](LICENSE). Artwork: [LICENSE-ARTWORK](LICENSE-ARTWORK).
 Sources, character creators and font licenses: [NOTICE](NOTICE).
 Per-image provenance and hashes: [ARTWORK.json](ARTWORK.json).
-Illustrations are for personal, non-commercial use. Character redistribution
-clearance remains independently unverified and is disclosed for market review.
+Illustrations are for personal, non-commercial use. Permission matters are handled by the author as stated in NOTICE.
 This is not an official DeepSeek theme or an Android/iOS app theme.
 
 Update caveat: Skin Center 0.4.8 may retain old styles at the same path in an existing desktop window. Reapplying is not guaranteed to clear them. Reopen DSH after running tasks finish; original-path cold restart was tested successfully. If theme selection reverts, finish active tasks and restart normally; this is a recovery step, not a proven root-cause fix.
@@ -61,8 +60,8 @@ Update caveat: Skin Center 0.4.8 may retain old styles at the same path in an ex
 
 | 内容 / Content | 来源 / Source | 状态 / Status |
 | --- | --- | --- |
-| DIY Journal 1.14.1 皮肤与配图 | [Alphazerolan](https://github.com/Alphazerolan/diy-journal-skin) | Xtsaixuexi 于 2026-11-17 确认团队成员已授权使用；可核验的许可记录待补充 / contributor-reported team permission |
-| 原角色及女仆改造 | 上善 / ZipZipPipe，见 [NOTICE](NOTICE) 所列公开署名 | 原角色再分发许可未独立核验 / underlying character clearance outstanding |
+| DIY Journal 1.14.1 皮肤与配图 | [Alphazerolan](https://github.com/Alphazerolan/diy-journal-skin) | 作者确认团队使用授权 / author-confirmed team permission |
+| 原角色及女仆改造 | 上善 / ZipZipPipe，见 [NOTICE](NOTICE) 所列公开署名 | 作者声明相关使用与再分发授权已取得 / author-declared use and redistribution permission |
 | Whale Desk 适配、新书桌与花饰 | Xtsaixuexi / OpenAI image generation | 项目自身贡献；不替代第三方角色许可 / project contribution does not grant third-party rights |
 
-版权与来源声明由贡献者负责提供、核验与更正，不转移给市场维护者；这不替代缺失的角色许可。Contributor responsibility is described in NOTICE. Do not treat this submission as market-approved.
+本项目由 Xtsaixuexi 持续维护；授权记录、版权与来源事项由作者负责，并与维护者直接对接。This is the author's declaration; market review remains a separate maintainer decision. See NOTICE.
